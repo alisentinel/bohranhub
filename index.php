@@ -131,11 +131,12 @@ ob_start('ob_gzhandler');
             <h2 id="about-heading">درباره بحران‌هاب</h2>
             <p>بحران‌هاب یک منبع اطلاعاتی غیرانتفاعی برای دسترسی سریع به منابع اضطراری در شرایط بحران است. این وب‌سایت برای کار روی دستگاه‌های قدیمی و اتصالات کُند طراحی شده است.</p>
         </section>
+        <?php /*
         <section id="contact" class="section" aria-labelledby="contact-heading">
             <h2 id="contact-heading">تماس با ما</h2>
             <p>برای پیشنهادات و گزارش مشکلات:</p>
             <p><strong>ایمیل:</strong> <?= htmlspecialchars($site['email']) ?></p>
-        </section>
+        </section> */ ?>
     </main>
     <footer role="contentinfo">
         <div class="container">
