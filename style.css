@@ -81,18 +81,30 @@ main {
     padding: 16px 0 32px
 }
 
-/* Tags Section */
-.tags-section {
-    margin-bottom: 20px;
+/* Section */
+.section {
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 12px;
     background: #fff;
     border: 2px solid #1a1a1a;
     border-radius: 6px
 }
 
-.tags-section h2 {
-    font-size: 1rem;
-    margin-bottom: 10px
+.section ul {
+    margin-right: 15px;
+}
+
+.section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 6px
+}
+
+.section p {
+    font-size: 0.9rem;
+    margin-top: 8px
 }
 
 .tags-list {
@@ -251,27 +263,6 @@ details[open] summary {
     font-size: 0.65rem;
     border-radius: 2px;
     color: #777
-}
-
-/* Info sections */
-.info-section {
-    margin-top: 24px;
-    padding: 16px;
-    background: #fff;
-    border: 2px solid #1a1a1a;
-    border-radius: 6px
-}
-
-.info-section h2 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    border-bottom: 2px solid #1a1a1a;
-    padding-bottom: 6px
-}
-
-.info-section p {
-    font-size: 0.9rem;
-    margin-top: 8px
 }
 
 /* Footer */
