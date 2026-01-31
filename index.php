@@ -62,8 +62,8 @@ ob_start('ob_gzhandler');
     <nav role="navigation" aria-label="منوی اصلی">
         <div class="container">
             <a href="/" class="active" aria-current="page">خانه</a>
-            <a href="#about">درباره ما</a>
-            <a href="#contact">تماس</a>
+            <?php /* <a href="#about">درباره ما</a>
+            <a href="#contact">تماس</a> */ ?>
             <a href="<?= htmlspecialchars($site['github']) ?>" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
     </nav>
