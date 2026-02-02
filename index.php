@@ -134,12 +134,18 @@ ob_start('ob_gzhandler');
                         <summary><?= count($tile['links']) ?> مورد</summary>
                         <ul class="links">
                             <?php foreach ($tile['links'] as $link): ?>
-                                <?php if ($link['url']): ?>
-                                    <li><a href="<?= htmlspecialchars($link['url']) ?>"><?= htmlspecialchars($link['text']) ?></a>
-                                    </li>
-                                <?php else: ?>
-                                    <li><strong><?= htmlspecialchars($link['text']) ?></strong></li>
-                                <?php endif; ?>
+                                <li>
+                                    <?php if ($link['url']): ?>
+                                        <a href="<?= htmlspecialchars($link['url']) ?>">
+                                            <?= htmlspecialchars($link['text']) ?>
+                                        </a>
+                                    <?php else: ?>
+                                        <strong><?= htmlspecialchars($link['text']) ?></strong>
+                                    <?php endif; ?>
+                                    <?php if (!empty($link['description'])): ?>
+                                        <p class="link-description"><?= htmlspecialchars($link['description']) ?></p>
+                                    <?php endif; ?>
+                                </li>
                             <?php endforeach; ?>
                         </ul>
                     </details>
