@@ -25,6 +25,7 @@ jobs:
           server-dir: /public_html/
           exclude: |
             **/.git*
+            **/.git/**
             **/.github/**
             **/.env
 
@@ -46,5 +47,6 @@ jobs:
           server-dir: /public_html/dev/
           exclude: |
             **/.git*
+            **/.git/**
             **/.github/**
             **/.env
