@@ -8,44 +8,122 @@
     "github": "https://github.com/AliSentinel/bohranhub"
   },
   "tags": [
-    { "id": "all", "label": "همه" },
-    { "id": "useful", "label": "کاربردی" },
-    { "id": "cities", "label": "شهرها" },
-    { "id": "emergency", "label": "اضطراری" },
-    { "id": "health", "label": "سلامت" },
-    { "id": "shelter", "label": "سرپناه" },
-    { "id": "food", "label": "غذا و آب" },
-    { "id": "communication", "label": "ارتباطات" },
-    { "id": "safety", "label": "ایمنی" },
-    { "id": "info", "label": "اطلاعات" },
-    { "id": "news", "label": "اخبار" },
-    { "id": "radio", "label": "رادیو" },
-    { "id": "natural-disaster", "label": "بلایای طبیعی" },
-    { "id": "share", "label": "اشتراک‌گذاری" },
-    { "id": "search-engine", "label": "موتور جستجو" }
+    {
+      "id": "all",
+      "label": "همه"
+    },
+    {
+      "id": "useful",
+      "label": "کاربردی"
+    },
+    {
+      "id": "cities",
+      "label": "شهرها"
+    },
+    {
+      "id": "emergency",
+      "label": "اضطراری"
+    },
+    {
+      "id": "health",
+      "label": "سلامت"
+    },
+    {
+      "id": "shelter",
+      "label": "سرپناه"
+    },
+    {
+      "id": "food",
+      "label": "غذا و آب"
+    },
+    {
+      "id": "communication",
+      "label": "ارتباطات"
+    },
+    {
+      "id": "safety",
+      "label": "ایمنی"
+    },
+    {
+      "id": "info",
+      "label": "اطلاعات"
+    },
+    {
+      "id": "news",
+      "label": "اخبار"
+    },
+    {
+      "id": "radio",
+      "label": "رادیو"
+    },
+    {
+      "id": "natural-disaster",
+      "label": "بلایای طبیعی"
+    },
+    {
+      "id": "share",
+      "label": "اشتراک‌گذاری"
+    },
+    {
+      "id": "search-engine",
+      "label": "موتور جستجو"
+    },
+    {
+      "id": "shop",
+      "label": "خرید"
+    }
   ],
   "tiles": [
     {
       "icon": "📞",
       "title": "شماره‌های اضطراری",
       "description": "شماره‌های مهم برای تماس در شرایط بحران",
-      "tags": ["emergency", "health", "safety"],
+      "tags": [
+        "emergency",
+        "health",
+        "safety"
+      ],
       "links": [
-        { "text": "۱۱۵ - اورژانس", "url": "tel:115" },
-        { "text": "۱۲۵ - آتش‌نشانی", "url": "tel:125" },
-        { "text": "۱۱۰ - پلیس", "url": "tel:110" },
-        { "text": "۱۴۱ - هلال‌احمر", "url": "tel:141" },
-        { "text": "۱۱۲ - اورژانس سراسری", "url": "tel:112" }
+        {
+          "text": "۱۱۵ - اورژانس",
+          "url": "tel:115"
+        },
+        {
+          "text": "۱۲۵ - آتش‌نشانی",
+          "url": "tel:125"
+        },
+        {
+          "text": "۱۱۰ - پلیس",
+          "url": "tel:110"
+        },
+        {
+          "text": "۱۴۱ - هلال‌احمر",
+          "url": "tel:141"
+        },
+        {
+          "text": "۱۱۲ - اورژانس سراسری",
+          "url": "tel:112"
+        }
       ]
     },
     {
       "icon": "🏥",
       "title": "کمک‌های اولیه",
       "description": "راهنمای کمک‌های اولیه در شرایط بحران",
-      "tags": ["health", "emergency", "safety"],
+      "tags": [
+        "health",
+        "emergency",
+        "safety"
+      ],
       "links": [
-        { "text": "تماس با اورژانس", "url": "tel:115" },
-        { "text": "تماس با هلال احمر", "url": "tel:112" },
+        {
+          "text": "تماس با اورژانس",
+          "url": "tel:115"
+        },
+        {
+          "text": "تماس با هلال احمر",
+          "url": "tel:112"
+        },
         {
           "text": "کتابچه کمک‌های اولیه برای عموم، در شرایط جنگی و تروریستی (سازمان اورژانس)(📕🇮🇷)",
           "url": "./files/کتابچه-رسمی-اورژانس.pdf"
@@ -56,42 +134,113 @@
       "icon": "📰",
       "title": "اخبار و اطلاعیه‌ها",
       "description": "منابع خبری در دسترس در اینترنت داخلی",
-      "tags": ["news"],
+      "tags": [
+        "news"
+      ],
       "links": [
-        { "text": "زومیت", "url": "https://zoomit.ir" },
-        { "text": "دیجیاتو", "url": "https://digiato.com" },
-        { "text": "تابناک", "url": "https://tabnak.ir" },
-        { "text": "ایلنا", "url": "https://ilna.news" },
-        { "text": "خبرآنلاین", "url": "https://khabaronline.ir" },
-        { "text": "ایسنا (🇮🇷)", "url": "https://isna.ir" },
-        { "text": "ایرنا (🇮🇷)", "url": "https://irna.ir" },
-        { "text": "شرق", "url": "https://sharghdaily.com" },
-        { "text": "انتخاب", "url": "https://entekhab.ir" },
-        { "text": "اعتماد آنلاین", "url": "https://etemadonline.com" },
-        { "text": "مهر (🇮🇷)", "url": "https://mehrnews.com" },
-        { "text": "ماهنامه پیوست", "url": "https://peivast.com" }
+        {
+          "text": "زومیت",
+          "url": "https://zoomit.ir"
+        },
+        {
+          "text": "دیجیاتو",
+          "url": "https://digiato.com"
+        },
+        {
+          "text": "تابناک",
+          "url": "https://tabnak.ir"
+        },
+        {
+          "text": "ایلنا",
+          "url": "https://ilna.news"
+        },
+        {
+          "text": "خبرآنلاین",
+          "url": "https://khabaronline.ir"
+        },
+        {
+          "text": "ایسنا (🇮🇷)",
+          "url": "https://isna.ir"
+        },
+        {
+          "text": "ایرنا (🇮🇷)",
+          "url": "https://irna.ir"
+        },
+        {
+          "text": "شرق",
+          "url": "https://sharghdaily.com"
+        },
+        {
+          "text": "انتخاب",
+          "url": "https://entekhab.ir"
+        },
+        {
+          "text": "اعتماد آنلاین",
+          "url": "https://etemadonline.com"
+        },
+        {
+          "text": "مهر (🇮🇷)",
+          "url": "https://mehrnews.com"
+        },
+        {
+          "text": "ماهنامه پیوست",
+          "url": "https://peivast.com"
+        }
       ]
     },
     {
       "icon": "🔧",
       "title": "وبسایت‌های کاربردی",
-      "tags": ["info", "useful"],
+      "tags": [
+        "info",
+        "useful"
+      ],
       "links": [
-        { "text": "ساعت و تقویم", "url": "https://time.ir" },
-        { "text": "آب و هوا (🇮🇷)", "url": "https://www.irimo.ir/" },
-        { "text": "نقشه ایران", "url": "https://naghsh.ir" },
-        { "text": "دیکشنری آنلاین", "url": "https://www.aryanpour.com" },
-        { "text": "اوقات شرعی", "url": "https://www.prayertimes.ir" },
-        { "text": "سرعت سنج اینترنت", "url": "https://speedtest.ir" },
-        { "text": "ماشین حساب", "url": "https://www.bahesab.ir", "description": "انواع محاسبه زمان، جغرافیا، واحد ها، ریاضی، وام، سود سپرده بانکی و..." },
-        { "text": "مبدل واحدها", "url": "https://unitconverters.ir" }
+        {
+          "text": "ساعت و تقویم",
+          "url": "https://time.ir"
+        },
+        {
+          "text": "آب و هوا (🇮🇷)",
+          "url": "https://www.irimo.ir/"
+        },
+        {
+          "text": "نقشه ایران",
+          "url": "https://naghsh.ir"
+        },
+        {
+          "text": "دیکشنری آنلاین",
+          "url": "https://www.aryanpour.com"
+        },
+        {
+          "text": "اوقات شرعی",
+          "url": "https://www.prayertimes.ir"
+        },
+        {
+          "text": "سرعت سنج اینترنت",
+          "url": "https://speedtest.ir"
+        },
+        {
+          "text": "ماشین حساب",
+          "url": "https://www.bahesab.ir",
+          "description": "انواع محاسبه زمان، جغرافیا، واحد ها، ریاضی، وام، سود سپرده بانکی و..."
+        },
+        {
+          "text": "مبدل واحدها",
+          "url": "https://unitconverters.ir"
+        }
       ]
     },
     {
       "title": "تهران",
-      "tags": ["cities"],
+      "tags": [
+        "cities"
+      ],
       "links": [
-        { "text": "شهرداری تهران (🇮🇷)", "url": "https://tehran.ir" },
+        {
+          "text": "شهرداری تهران (🇮🇷)",
+          "url": "https://tehran.ir"
+        },
         {
           "text": "وضعیت آلودگی هوای تهران (🇮🇷)",
           "url": "https://air.tehran.ir"
@@ -110,28 +259,95 @@
       "icon": "📻",
       "title": "رادیو",
       "description": "لیست امواج رادیویی محلی و ملی",
-      "tags": ["communication", "radio"],
-      "links": [{ "text": "به زودی", "url": "#" }]
+      "tags": [
+        "communication",
+        "radio"
+      ],
+      "links": [
+        {
+          "text": "به زودی",
+          "url": "#"
+        }
+      ]
     },
     {
       "icon": "📋",
       "title": "پیست‌هاب (Pastehub)",
       "description": "سرویس اشتراک‌گذاری متن و فایل آنلاین داخلی با قابلیت رمزگذاری یا انتخاب حذف خودکار",
-      "tags": ["communication", "share", "useful"],
-      "links": [{ "text": "پیست‌هاب", "url": "https://pastehub.ir" }]
+      "tags": [
+        "communication",
+        "share",
+        "useful"
+      ],
+      "links": [
+        {
+          "text": "پیست‌هاب",
+          "url": "https://pastehub.ir"
+        }
+      ]
     },
     {
       "icon": "🔍",
       "title": "موتور جستجو",
       "description": "موتور جستجوی داخلی برای دسترسی به اطلاعات در شرایط قطع اینترنت جهانی",
-      "tags": ["search-engine"],
+      "tags": [
+        "search-engine"
+      ],
       "links": [
-        { "text": "ذره‌بین", "url": "https://zarebin.ir" },
-        { "text": "گردو", "url": "https://gerdoo.me" },
-        { "text": "2059", "url": "https://2059.ir" },
-        { "text": "شادبین", "url": "https://shaadbin.ir" },
-        { "text": "ریسمون", "url": "https://rismoon.com" },
-        { "text": "ترب (برای جستجو و خرید کالا)", "url": "https://torob.com" }
+        {
+          "text": "ذره‌بین",
+          "url": "https://zarebin.ir"
+        },
+        {
+          "text": "گردو",
+          "url": "https://gerdoo.me"
+        },
+        {
+          "text": "2059",
+          "url": "https://2059.ir"
+        },
+        {
+          "text": "شادبین",
+          "url": "https://shaadbin.ir"
+        },
+        {
+          "text": "ریسمون",
+          "url": "https://rismoon.com"
+        },
+        {
+          "text": "ترب (برای جستجو و خرید کالا)",
+          "url": "https://torob.com"
+        }
+      ]
+    },
+    {
+      "icon": "🛒",
+      "title": "خرید",
+      "description": "فروشگاه‌های آنلاین داخلی برای خرید کالاها و خدمات",
+      "tags": [
+        "shop"
+      ],
+      "links": [
+        {
+          "text": "ترب (برای جستجو و مقایسه قیمت کالا)",
+          "url": "https://torob.com"
+        },
+        {
+          "text": "دیجی‌کالا",
+          "url": "https://digikala.com"
+        },
+        {
+          "text": "اسنپ‌شاپ",
+          "url": "https://snappshop.ir"
+        },
+        {
+          "text": "تپسی‌شاپ",
+          "url": "https://tapsi.shop"
+        },
+        {
+          "text": "خانومی (آرایشی بهداشتی)",
+          "url": "https://www.khanoumi.com"
+        }
       ]
     }
   ]
