@@ -107,8 +107,8 @@ ob_start('ob_gzhandler');
                 <ul>
                     <li>گیت‌هاب: <a href="<?= htmlspecialchars($site['github']) ?>" target="_blank"
                             rel="noopener"><?= htmlspecialchars($site['github']) ?> ↗</a></li>
-                    <li>تلگرام: <a href="https://t.me/bohranhub" target="_blank" rel="noopener">https://t.me/imS
-                            e ntinel ↗</a></li>
+                    <li>تلگرام: <a href="https://t.me/imSentinel" target="_blank" rel="noopener">https://t.me/imSentinel
+                            ↗</a></li>
                 </ul>
         </section>
         <section id="tags" class="section" aria-label="فیلتر برچسب‌ها">
@@ -124,9 +124,12 @@ ob_start('ob_gzhandler');
             <?php foreach ($tiles as $tile): ?>
                 <article class="tile" data-tags="<?= implode(',', $tile['tags']) ?>" role="article"
                     aria-labelledby="tile-<?= md5($tile['title']) ?>">
-                    <h3><?= $tile['icon'] ?>     <?= htmlspecialchars($tile['title']) ?></h3>
+                    <h3><?= !empty($tile['icon']) ? $tile['icon'] . '     ' : '' ?><?= htmlspecialchars($tile['title']) ?>
+                    </h3>
 
-                    <p><?= htmlspecialchars($tile['description']) ?></p>
+                    <?php if (!empty($tile['description'])): ?>
+                        <p><?= htmlspecialchars($tile['description']) ?></p>
+                    <?php endif; ?>
                     <details>
                         <summary><?= count($tile['links']) ?> مورد</summary>
                         <ul class="links">
