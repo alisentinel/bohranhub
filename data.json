@@ -37,6 +37,10 @@
       "label": "سفر"
     },
     {
+      "id": "email",
+      "label": "ایمیل"
+    },
+    {
       "id": "health",
       "label": "سلامت"
     },
@@ -261,6 +265,38 @@
         {
           "text": "مبدل واحدها",
           "url": "https://unitconverters.ir"
+        }
+      ]
+    },
+    {
+      "icon": "📧",
+      "title": "ایمیل",
+      "tags": [
+        "communication",
+        "email",
+        "useful"
+      ],
+      "links": [
+        {
+          "text": "جیمیل (🌎)",
+          "url": "https://mail.google.com",
+          "description": "در صورت دسترسی به google.com ممکن است آدرس mail.google.com هم در دسترس باشد (متفاوت با gmail.com)"
+        },
+        {
+          "text": "سرویس رایانامه ایران (🇮🇷)",
+          "url": "https://mail.iran.ir"
+        },
+        {
+          "text": "میل‌فا",
+          "url": "https://www.mailfa.com/"
+        },
+        {
+          "text": "رایانامه",
+          "url": "https://www.mail.ir/"
+        },
+        {
+          "text": "چاپار",
+          "url": "https://chmail.ir"
         }
       ]
     },
