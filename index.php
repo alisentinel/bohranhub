@@ -142,6 +142,7 @@ ob_start('ob_gzhandler');
         <div class="container">
             <p>بحران‌هاب © ۱۴۰۴ - منبع باز و رایگان برای همه</p>
             <p class="small">این سایت برای کار در شرایط سخت و اتصالات ضعیف بهینه شده است.</p>
+            <p class="small">مجوز: <a href="<?= htmlspecialchars($site['github']) ?>/blob/main/LICENSE" target="_blank" rel="noopener">AGPL-3.0</a> - کد منبع در <a href="<?= htmlspecialchars($site['github']) ?>" target="_blank" rel="noopener">GitHub</a></p>
         </div>
     </footer>
     <script><?php
