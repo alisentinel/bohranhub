@@ -25,7 +25,8 @@ $tags = $data['tags'];
 $tiles = $data['tiles'];
 
 // Helper to get tag label
-function getTagLabel($tags, $id) {
+function getTagLabel($tags, $id)
+{
     foreach ($tags as $tag) {
         if ($tag['id'] === $id) return $tag['label'];
     }
@@ -37,21 +38,25 @@ ob_start('ob_gzhandler');
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?= htmlspecialchars($site['description']) ?>">
     <meta name="theme-color" content="#1a1a1a">
     <title><?= htmlspecialchars($site['title']) ?></title>
-    <style><?php
+    <style>
+        <?php
         $css = file_get_contents(__DIR__ . '/style.css');
         $css = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css);
         $css = str_replace(["\r\n", "\r", "\n", "\t", '  ', '    ', '    '], '', $css);
         $css = preg_replace('/\s+/', ' ', $css);
         $css = preg_replace('/\s*([{}:;,])\s*/', '$1', $css);
         echo $css;
-    ?></style>
+        ?>
+    </style>
 </head>
+
 <body>
     <header role="banner">
         <div class="container">
@@ -63,98 +68,119 @@ ob_start('ob_gzhandler');
         <div class="container">
             <a href="/" class="active" aria-current="page">خانه</a>
             <?php /* <a href="#about">درباره ما</a>
-            <a href="#contact">تماس</a> */ ?>
+<a href="#contact">تماس</a> */ ?>
+
             <a href="<?= htmlspecialchars($site['github']) ?>" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
     </nav>
     <main role="main" class="container">
         <section id="introduction" class="section" aria-labelledby="intro-heading">
             <h2>خوش آمدید به بحران‌هاب</h2>
-            <p>در اینجا می‌توانید منابع اضطراری را بر اساس برچسب‌ها فیلتر کنید تا سریع‌تر به اطلاعات مورد نیاز خود دسترسی پیدا کنید.</p>
-            <h4>رفع مسئولیت:</h4>
+
+            <p>در اینجا می‌توانید منابع اضطراری را بر اساس برچسب‌ها فیلتر کنید تا سریع‌تر به اطلاعات مورد نیاز خود
+                دسترسی پیدا کنید.</p>
+            <h4>
+                رفع مسئولیت:</h4>
             <ul>
                 <li>ما محتوای معرفی‌شده در وب‌سایت‌ها را <b>تأیید نمی‌کنیم</b>.</li>
                 <li>امیدواریم هرگز نیازی به استفاده از این منابع نداشته باشید. ❤️</li>
                 <li>معرفی سایت به معنای تأیید محتوا یا خدمات یا تأیید سیاست‌های آن‌ها <b>نیست</b>.</li>
-                <li>- ما با هرگونه محدودیت و سانسور در بستر اینترنت بین‌الملل <b>مخالف</b> هستیم؛ این وبسایت هیچگونه تسهیل‌گری در جایگزینی سرویس‌های بین‌الملل نمی‌کند.</li>
+                <li>- ما با هرگونه محدودیت و سانسور در بستر اینترنت بین‌الملل <b>مخالف</b> هستیم؛ این وبسایت هیچگونه
+                    تسهیل‌گری در جایگزینی سرویس‌های بین‌الملل نمی‌کند.</li>
             </ul>
-            <br><h4>نماد ها</h2>
-            <ul>
-                <li>پرچم = وب‌سایت‌های دولتی یا با پشتوانه دولت پرچم رسمی همان کشور</li>
-                <li>🌎 = وب‌سایت‌های بین‌المللی</li>
-                <li>🤝 = پروژه‌های اوپن‌سورس</li>
-                <li>📕 = کتابچه (معمولاً PDF)</li>
-                <li>📱 = اپلیکیشن موبایل</li>
-                <li>✅ = وبسایت‌های ساخته یا تأیید شده توسط تیم بحران‌هاب</li>
-            </ul>
+            <br>
+            <h4>نماد ها</h2>
+                <ul>
+                    <li>پرچم = وب‌سایت‌های دولتی یا با پشتوانه دولت پرچم رسمی همان کشور</li>
 
-            <br><h4>برای افزودن منابع جدید یا طرح مشکلات از طریق گیت‌هاب یا تلگرام اقدام کنید:</h4>
-            <ul>
-                <li>گیت‌هاب: <a href="<?= htmlspecialchars($site['github']) ?>" target="_blank" rel="noopener"><?= htmlspecialchars($site['github']) ?> ↗</a></li>
-                <li>تلگرام: <a href="https://t.me/bohranhub" target="_blank" rel="noopener">https://t.me/imSentinel ↗</a></li>
-            </ul>
+                    <li>🌎 = وب‌سایت‌های بین‌المللی</li>
+                    <li>🤝 = پروژه‌های اوپن‌سورس</li>
+                    <li>📕 = کتابچه (معمولاً PDF)</li>
+
+                    <li>📱 = اپلیکیشن موبایل</li>
+
+                    <li>✅ = وبسایت‌های ساخته یا تأیید شده توسط تیم بحران‌هاب</li>
+                </ul>
+
+                <br>
+                <h4>برای افزودن منابع جدید یا طرح مشکلات از طریق گیت‌هاب یا تلگرام اقدام کنید:</h4>
+                <ul>
+                    <li>گیت‌هاب: <a href="<?= htmlspecialchars($site['github']) ?>" target="_blank"
+                            rel="noopener"><?= htmlspecialchars($site['github']) ?> ↗</a></li>
+                    <li>تلگرام: <a href="https://t.me/bohranhub" target="_blank" rel="noopener">https://t.me/imS
+                            e ntinel ↗</a></li>
+                </ul>
         </section>
         <section id="tags" class="section" aria-label="فیلتر برچسب‌ها">
             <h2>فیلتر بر اساس برچسب:</h2>
             <div class="tags-list" role="group" aria-label="دکمه‌های فیلتر">
-<?php foreach ($tags as $tag): ?>
-                <button class="tag<?= $tag['id'] === 'all' ? ' active' : '' ?>" data-tag="<?= $tag['id'] ?>" aria-pressed="<?= $tag['id'] === 'all' ? 'true' : 'false' ?>">#<?= htmlspecialchars($tag['label']) ?></button>
-<?php endforeach; ?>
+                <?php foreach ($tags as $tag): ?>
+                    <button class="tag<?= $tag['id'] === 'all' ? ' active' : '' ?>" data-tag="<?= $tag['id'] ?>"
+                        aria-pressed="<?= $tag['id'] === 'all' ? 'true' : 'false' ?>">#<?= htmlspecialchars($tag['label']) ?></button>
+                <?php endforeach; ?>
             </div>
         </section>
         <section id="tiles" class="tiles-section" aria-label="کارت‌های اطلاعاتی">
-<?php foreach ($tiles as $tile): ?>
-            <article class="tile" data-tags="<?= implode(',', $tile['tags']) ?>" role="article" aria-labelledby="tile-<?= md5($tile['title']) ?>">
-                <h3><?= $tile['icon'] ?> <?= htmlspecialchars($tile['title']) ?></h3>
-                <p><?= htmlspecialchars($tile['description']) ?></p>
-                <details>
-                    <summary><?= count($tile['links']) ?> مورد</summary>
-                    <ul class="links">
-<?php foreach ($tile['links'] as $link): ?>
-<?php if ($link['url']): ?>
-                        <li><a href="<?= htmlspecialchars($link['url']) ?>"><?= htmlspecialchars($link['text']) ?></a></li>
-<?php else: ?>
-                        <li><strong><?= htmlspecialchars($link['text']) ?></strong></li>
-<?php endif; ?>
-<?php endforeach; ?>
-                    </ul>
-                </details>
-                <div class="tile-tags">
-<?php foreach ($tile['tags'] as $tagId): ?>
-                    <span class="tile-tag">#<?= htmlspecialchars(getTagLabel($tags, $tagId)) ?></span>
-<?php endforeach; ?>
-                </div>
-            </article>
-<?php endforeach; ?>
+            <?php foreach ($tiles as $tile): ?>
+                <article class="tile" data-tags="<?= implode(',', $tile['tags']) ?>" role="article"
+                    aria-labelledby="tile-<?= md5($tile['title']) ?>">
+                    <h3><?= $tile['icon'] ?>     <?= htmlspecialchars($tile['title']) ?></h3>
+
+                    <p><?= htmlspecialchars($tile['description']) ?></p>
+                    <details>
+                        <summary><?= count($tile['links']) ?> مورد</summary>
+                        <ul class="links">
+                            <?php foreach ($tile['links'] as $link): ?>
+                                <?php if ($link['url']): ?>
+                                    <li><a href="<?= htmlspecialchars($link['url']) ?>"><?= htmlspecialchars($link['text']) ?></a>
+                                    </li>
+                                <?php else: ?>
+                                    <li><strong><?= htmlspecialchars($link['text']) ?></strong></li>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </ul>
+                    </details>
+                    <div class="tile-tags">
+                        <?php foreach ($tile['tags'] as $tagId): ?>
+                            <span class="tile-tag">#<?= htmlspecialchars(getTagLabel($tags, $tagId)) ?></span>
+                        <?php endforeach; ?>
+
+                    </div>
+                </article>
+            <?php endforeach; ?>
         </section>
         <section id="about" class="section" aria-labelledby="about-heading">
             <h2 id="about-heading">درباره بحران‌هاب</h2>
-            <p>بحران‌هاب یک منبع اطلاعاتی غیرانتفاعی برای دسترسی سریع به منابع اضطراری در شرایط بحران است. این وب‌سایت برای کار روی دستگاه‌های قدیمی و اتصالات کُند طراحی شده است.</p>
+            <p>بحران‌هاب یک منبع اطلاعاتی غیرانتفاعی برای دسترسی سریع به منابع اضطراری در شرایط بحران است. این وب‌سایت
+                برای کار روی دستگاه‌های قدیمی و اتصالات کُند طراحی شده است.</p>
         </section>
         <?php /*
-        <section id="contact" class="section" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">تماس با ما</h2>
-            <p>برای پیشنهادات و گزارش مشکلات:</p>
-            <p><strong>ایمیل:</strong> <?= htmlspecialchars($site['email']) ?></p>
-        </section> */ ?>
+<section id="contact" class="section" aria-labelledby="contact-heading">
+<h2 id="contact-heading">تماس با ما</h2>
+<p>برای پیشنهادات و گزارش مشکلات:</p>
+<p><strong>ایمیل:</strong> <?= htmlspecialchars($site['email']) ?></p>
+</section> */ ?>
     </main>
     <footer role="contentinfo">
         <div class="container">
             <p>بحران‌هاب © ۱۴۰۴ - منبع باز و رایگان برای همه</p>
             <p class="small">این سایت برای کار در شرایط سخت و اتصالات ضعیف بهینه شده است.</p>
-            <p class="small">مجوز: <a href="<?= htmlspecialchars($site['github']) ?>/blob/main/LICENSE" target="_blank" rel="noopener">AGPL-3.0</a> - کد منبع در <a href="<?= htmlspecialchars($site['github']) ?>" target="_blank" rel="noopener">GitHub</a></p>
+            <p class="small">مجو ز: <a href=" <?= htmlspecialchars($site['github']) ?>/blob/main/LICENSE"
+                    target="_blank" rel="noopener">AGPL-3.0</a> - کد منبع در <a
+                    href="<?= htmlspecialchars($site['github']) ?>" target="_blank" rel="noopener">GitHub</a></p>
         </div>
     </footer>
     <script><?php
-        $js = file_get_contents(__DIR__ . '/script.js');
-        $js = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $js);
-        $js = preg_replace('/\/\/.*$/m', '', $js);
-        $js = str_replace(["\r\n", "\r", "\n", "\t"], '', $js);
-        $js = preg_replace('/\s+/', ' ', $js);
-        $js = preg_replace('/\s*([{}();,:])\s*/', '$1', $js);
-        echo $js;
+    $js = file_get_contents(__DIR__ . '/script.js');
+    $js = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $js);
+    $js = preg_replace('/\/\/.*$/m', '', $js);
+    $js = str_replace(["\r\n", "\r", "\n", "\t"], '', $js);
+    $js = preg_replace('/\s+/', ' ', $js);
+    $js = preg_replace('/\s*([{}();,:])\s*/', '$1', $js);
+    echo $js;
     ?></script>
 </body>
+
 </html>
 <?php
 // Get buffered content and minify HTML
