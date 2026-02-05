@@ -33,11 +33,41 @@ function getTagLabel($tags, $id)
     return $id;
 }
 
+// Helper to render checklist items (recursive for nested items)
+function renderChecklistItems($items, $parentId = '')
+{
+    foreach ($items as $index => $item) {
+        $itemId = $parentId ? $parentId . '-' . $index : 'check-' . $index;
+        $hasChildren = !empty($item['children']);
+        ?>
+        <li class="checklist-item" data-item-id="<?= htmlspecialchars($itemId) ?>">
+            <div class="checklist-item-content">
+                <label class="checklist-label">
+                    <input type="checkbox" class="checklist-checkbox" data-item-id="<?= htmlspecialchars($itemId) ?>">
+                    <span class="checklist-text"><?= htmlspecialchars($item['text']) ?></span>
+                </label>
+                <button class="checklist-hide-btn" data-item-id="<?= htmlspecialchars($itemId) ?>" title="مخفی کردن" aria-label="مخفی کردن این آیتم">×</button>
+            </div>
+            <?php if (!empty($item['description'])): ?>
+                <p class="checklist-description"><?= htmlspecialchars($item['description']) ?></p>
+            <?php endif; ?>
+            <?php if ($hasChildren): ?>
+                <ul class="checklist-nested">
+                    <?php renderChecklistItems($item['children'], $itemId); ?>
+                    <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن آیتم(های) مخفی‌شده</button></li>
+                </ul>
+            <?php endif; ?>
+        </li>
+        <?php
+    }
+}
+
 // Helper to render a tile (recursive for nested tiles)
 function renderTile($tile, $tags, $depth = 0)
 {
     $hasChildren = !empty($tile['children']);
     $hasLinks = !empty($tile['links']);
+    $hasChecklist = !empty($tile['checklist']);
     $indentClass = $depth > 0 ? ' tile-nested tile-depth-' . $depth : '';
     ?>
     <article class="tile<?= $indentClass ?>" data-tags="<?= implode(',', $tile['tags']) ?>" role="article"
@@ -65,6 +95,16 @@ function renderTile($tile, $tags, $depth = 0)
                             <?php endif; ?>
                         </li>
                     <?php endforeach; ?>
+                </ul>
+            </details>
+        <?php endif; ?>
+
+        <?php if ($hasChecklist): ?>
+            <details>
+                <summary><?= count($tile['checklist']) ?> آیتم چک‌لیست</summary>
+                <ul class="checklist">
+                    <?php renderChecklistItems($tile['checklist']); ?>
+                    <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن آیتم(های) مخفی‌شده</button></li>
                 </ul>
             </details>
         <?php endif; ?>
