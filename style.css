@@ -265,6 +265,77 @@ details[open] summary {
     color: #777
 }
 
+/* Nested tiles (hierarchical structure) */
+.nested-tiles {
+    margin-top: 12px;
+    padding: 0;
+    background: transparent
+}
+
+.children-container {
+    margin-top: 12px;
+    margin-bottom: 8px
+}
+
+.children-container summary {
+    background: #d0d0c8;
+    border-color: #888;
+    font-size: 0.85rem
+}
+
+.children-container summary:hover,
+.children-container summary:focus {
+    background: #c0c0b8
+}
+
+.tile-nested {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid #999;
+    padding-left: 12px;
+    background: #fafaf8;
+    border-radius: 4px
+}
+
+.tile-nested.hidden {
+    display: none
+}
+
+.tile-nested h3 {
+    font-size: 1rem;
+    margin-bottom: 6px
+}
+
+.tile-nested details {
+    margin-bottom: 8px
+}
+
+.tile-nested summary {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    background: #e0e0d8
+}
+
+.tile-nested .links {
+    background: #fff;
+    padding: 6px 10px
+}
+
+/* Depth-based indentation */
+.tile-depth-1 {
+    margin-right: 0
+}
+
+.tile-depth-2 {
+    margin-right: 12px;
+    border-left-color: #aaa
+}
+
+.tile-depth-3 {
+    margin-right: 24px;
+    border-left-color: #bbb
+}
+
 /* Footer */
 footer {
     background: #1a1a1a;

@@ -33,6 +33,62 @@ function getTagLabel($tags, $id)
     return $id;
 }
 
+// Helper to render a tile (recursive for nested tiles)
+function renderTile($tile, $tags, $depth = 0)
+{
+    $hasChildren = !empty($tile['children']);
+    $hasLinks = !empty($tile['links']);
+    $indentClass = $depth > 0 ? ' tile-nested tile-depth-' . $depth : '';
+    ?>
+    <article class="tile<?= $indentClass ?>" data-tags="<?= implode(',', $tile['tags']) ?>" role="article"
+        aria-labelledby="tile-<?= md5($tile['title']) ?>">
+        <h3><?= !empty($tile['icon']) ? $tile['icon'] . '     ' : '' ?><?= htmlspecialchars($tile['title']) ?></h3>
+        <?php if (!empty($tile['description'])): ?>
+            <p><?= htmlspecialchars($tile['description']) ?></p>
+        <?php endif; ?>
+        
+        <?php if ($hasLinks): ?>
+            <details <?= $hasChildren ? '' : '' ?>>
+                <summary><?= count($tile['links']) ?> مورد</summary>
+                <ul class="links">
+                    <?php foreach ($tile['links'] as $link): ?>
+                        <li>
+                            <?php if ($link['url']): ?>
+                                <a href="<?= htmlspecialchars($link['url']) ?>">
+                                    <?= htmlspecialchars($link['text']) ?>
+                                </a>
+                            <?php else: ?>
+                                <strong><?= htmlspecialchars($link['text']) ?></strong>
+                            <?php endif; ?>
+                            <?php if (!empty($link['description'])): ?>
+                                <p class="link-description"><?= htmlspecialchars($link['description']) ?></p>
+                            <?php endif; ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </details>
+        <?php endif; ?>
+
+        <?php if ($hasChildren): ?>
+            <details class="children-container">
+                <summary><?= count($tile['children']) ?> شهر</summary>
+                <div class="nested-tiles">
+                    <?php foreach ($tile['children'] as $child): ?>
+                        <?php renderTile($child, $tags, $depth + 1); ?>
+                    <?php endforeach; ?>
+                </div>
+            </details>
+        <?php endif; ?>
+
+        <div class="tile-tags">
+            <?php foreach ($tile['tags'] as $tagId): ?>
+                <span class="tile-tag">#<?= htmlspecialchars(getTagLabel($tags, $tagId)) ?></span>
+            <?php endforeach; ?>
+        </div>
+    </article>
+    <?php
+}
+
 // Start output buffering with gzip compression
 ob_start('ob_gzhandler');
 ?>
@@ -122,40 +178,7 @@ ob_start('ob_gzhandler');
         </section>
         <section id="tiles" class="tiles-section" aria-label="کارت‌های اطلاعاتی">
             <?php foreach ($tiles as $tile): ?>
-                <article class="tile" data-tags="<?= implode(',', $tile['tags']) ?>" role="article"
-                    aria-labelledby="tile-<?= md5($tile['title']) ?>">
-                    <h3><?= !empty($tile['icon']) ? $tile['icon'] . '     ' : '' ?><?= htmlspecialchars($tile['title']) ?>
-                    </h3>
-
-                    <?php if (!empty($tile['description'])): ?>
-                        <p><?= htmlspecialchars($tile['description']) ?></p>
-                    <?php endif; ?>
-                    <details>
-                        <summary><?= count($tile['links']) ?> مورد</summary>
-                        <ul class="links">
-                            <?php foreach ($tile['links'] as $link): ?>
-                                <li>
-                                    <?php if ($link['url']): ?>
-                                        <a href="<?= htmlspecialchars($link['url']) ?>">
-                                            <?= htmlspecialchars($link['text']) ?>
-                                        </a>
-                                    <?php else: ?>
-                                        <strong><?= htmlspecialchars($link['text']) ?></strong>
-                                    <?php endif; ?>
-                                    <?php if (!empty($link['description'])): ?>
-                                        <p class="link-description"><?= htmlspecialchars($link['description']) ?></p>
-                                    <?php endif; ?>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </details>
-                    <div class="tile-tags">
-                        <?php foreach ($tile['tags'] as $tagId): ?>
-                            <span class="tile-tag">#<?= htmlspecialchars(getTagLabel($tags, $tagId)) ?></span>
-                        <?php endforeach; ?>
-
-                    </div>
-                </article>
+                <?php renderTile($tile, $tags); ?>
             <?php endforeach; ?>
         </section>
         <section id="about" class="section" aria-labelledby="about-heading">
