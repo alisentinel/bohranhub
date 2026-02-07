@@ -53,11 +53,16 @@ function renderChecklistItems($items, $parentId = '')
                 <p class="checklist-description"><?= htmlspecialchars($item['description']) ?></p>
             <?php endif; ?>
             <?php if ($hasChildren): ?>
-                <ul class="checklist-nested">
-                    <?php renderChecklistItems($item['children'], $itemId); ?>
-                    <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن
-                            آیتم(های) مخفی‌شده</button></li>
-                </ul>
+                <details>
+                    <summary class="checklist-summary">
+                        <span class="arrow-icon">◀</span> شامل <?= count($item['children']) ?> زیرمجموعه
+                    </summary>
+                    <ul class="checklist-nested">
+                        <?php renderChecklistItems($item['children'], $itemId); ?>
+                        <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن
+                                آیتم(های) مخفی‌شده</button></li>
+                    </ul>
+                </details>
             <?php endif; ?>
         </li>
         <?php
@@ -88,7 +93,7 @@ function renderTile($tile, $tags, $depth = 0)
 
         <?php if ($hasLinks): ?>
             <details <?= $hasChildren ? '' : '' ?>>
-                <summary><?= count($tile['links']) ?> مورد</summary>
+                <summary><span class="arrow-icon">◀</span> <?= count($tile['links']) ?> مورد</summary>
                 <ul class="links">
                     <?php foreach ($tile['links'] as $link): ?>
                         <li>
@@ -110,7 +115,7 @@ function renderTile($tile, $tags, $depth = 0)
 
         <?php if ($hasChecklist): ?>
             <details>
-                <summary><?= count($tile['checklist']) ?> آیتم چک‌لیست</summary>
+                <summary><span class="arrow-icon">◀</span> <?= count($tile['checklist']) ?> آیتم چک‌لیست</summary>
                 <ul class="checklist">
                     <?php renderChecklistItems($tile['checklist']); ?>
                     <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن
@@ -121,7 +126,7 @@ function renderTile($tile, $tags, $depth = 0)
 
         <?php if ($hasChildren): ?>
             <details class="children-container">
-                <summary><?= count($tile['children']) ?> شهر</summary>
+                <summary><span class="arrow-icon">◀</span> <?= count($tile['children']) ?> شهر</summary>
                 <div class="nested-tiles">
                     <?php foreach ($tile['children'] as $child): ?>
                         <?php renderTile($child, $tags, $depth + 1); ?>

@@ -77,7 +77,7 @@
     // Initialize search within cities tile
     var searchInput = document.getElementById('city-search');
     if (searchInput) {
-        searchInput.addEventListener('input', function(e) {
+        searchInput.addEventListener('input', function (e) {
             var query = e.target.value.trim().toLowerCase();
             searchCities(query);
         });
@@ -86,19 +86,19 @@
     function searchCities(query) {
         var searchInput = document.getElementById('city-search');
         if (!searchInput) return;
-        
+
         var resultElement = document.getElementById('city-search-result');
-        
+
         // Find the parent tile that contains the search input
         var parentTile = searchInput.closest('.tile');
         if (!parentTile) return;
-        
+
         // Find the children-container details element
         var childrenDetails = parentTile.querySelector('.children-container');
-        
+
         // Get all nested tiles within this parent
         var nestedTiles = parentTile.querySelectorAll('.tile-nested');
-        
+
         // If empty query, show all nested tiles and clear result
         if (!query) {
             for (var i = 0; i < nestedTiles.length; i++) {
@@ -127,7 +127,7 @@
                 }
             }
         }
-        
+
         // Update result message
         if (resultElement) {
             if (visibleCount === 0) {
@@ -207,12 +207,12 @@
     function updateRestoreButtons() {
         var restoreBtns = document.querySelectorAll('.checklist-restore-item');
         var hiddenItems = getHiddenItems();
-        
+
         for (var i = 0; i < restoreBtns.length; i++) {
             var restoreItem = restoreBtns[i];
             var parentList = restoreItem.parentElement;
             if (!parentList) continue;
-            
+
             // Check if this specific list has any hidden direct children
             var hasHidden = false;
             var directItems = parentList.querySelectorAll(':scope > .checklist-item[data-item-id]');
@@ -231,7 +231,7 @@
         var children = [];
         var listItem = checkbox.closest('.checklist-item');
         if (!listItem) return children;
-        
+
         var nestedList = listItem.querySelector('.checklist-nested');
         if (nestedList) {
             var childBoxes = nestedList.querySelectorAll('.checklist-checkbox');
@@ -246,13 +246,13 @@
     function getParentCheckbox(checkbox) {
         var listItem = checkbox.closest('.checklist-item');
         if (!listItem) return null;
-        
+
         var nestedList = listItem.parentElement;
         if (!nestedList || !nestedList.classList.contains('checklist-nested')) return null;
-        
+
         var parentItem = nestedList.closest('.checklist-item');
         if (!parentItem) return null;
-        
+
         return parentItem.querySelector(':scope > .checklist-item-content > .checklist-label > .checklist-checkbox');
     }
 
@@ -261,10 +261,10 @@
         var siblings = [];
         var listItem = checkbox.closest('.checklist-item');
         if (!listItem) return siblings;
-        
+
         var parentList = listItem.parentElement;
         if (!parentList) return siblings;
-        
+
         var items = parentList.querySelectorAll(':scope > .checklist-item');
         for (var i = 0; i < items.length; i++) {
             var cb = items[i].querySelector(':scope > .checklist-item-content > .checklist-label > .checklist-checkbox');
@@ -276,7 +276,7 @@
     // Update checkbox and all its children
     function updateCheckboxAndChildren(checkbox, checked, items) {
         var id = checkbox.getAttribute('data-item-id');
-        
+
         if (checked) {
             items[id] = true;
             checkbox.checked = true;
@@ -286,7 +286,7 @@
             checkbox.checked = false;
             checkbox.parentElement.classList.remove('checked');
         }
-        
+
         // Update all children (skip hidden ones)
         var children = getChildCheckboxes(checkbox);
         for (var i = 0; i < children.length; i++) {
@@ -303,11 +303,11 @@
     function updateParent(checkbox, items) {
         var parent = getParentCheckbox(checkbox);
         if (!parent) return;
-        
+
         var siblings = getSiblingCheckboxes(checkbox);
         var allChecked = true;
         var hasVisibleSiblings = false;
-        
+
         for (var i = 0; i < siblings.length; i++) {
             var siblingItem = siblings[i].closest('.checklist-item');
             // Skip hidden items
@@ -320,7 +320,7 @@
                 break;
             }
         }
-        
+
         var parentId = parent.getAttribute('data-item-id');
         // Only check parent if there are visible siblings and all are checked
         if (hasVisibleSiblings && allChecked) {
@@ -332,7 +332,7 @@
             parent.checked = false;
             parent.parentElement.classList.remove('checked');
         }
-        
+
         // Recursively update grandparent
         updateParent(parent, items);
     }
@@ -361,7 +361,7 @@
 
                 // Update checkbox and all its children
                 updateCheckboxAndChildren(cb, cb.checked, items);
-                
+
                 // Update parent if all siblings are checked
                 updateParent(cb, items);
 
@@ -388,14 +388,14 @@
                 var btn = e.target;
                 var itemId = btn.getAttribute('data-item-id');
                 var item = document.querySelector('.checklist-item[data-item-id="' + itemId + '"]');
-                
+
                 if (item) {
                     var hidden = getHiddenItems();
                     hidden[itemId] = true;
                     saveHiddenItems(hidden);
                     item.classList.add('item-hidden');
                     updateRestoreButtons();
-                    
+
                     // Update parent checkbox state after hiding
                     var checkbox = item.querySelector(':scope > .checklist-item-content > .checklist-label > .checklist-checkbox');
                     if (checkbox) {
@@ -415,9 +415,9 @@
                 var restoreItem = e.target.closest('.checklist-restore-item');
                 var parentList = restoreItem ? restoreItem.parentElement : null;
                 if (!parentList) return;
-                
+
                 var hidden = getHiddenItems();
-                
+
                 // Only restore items in this specific list
                 var directItems = parentList.querySelectorAll(':scope > .checklist-item.item-hidden');
                 for (var n = 0; n < directItems.length; n++) {
@@ -425,10 +425,10 @@
                     delete hidden[itemId];
                     directItems[n].classList.remove('item-hidden');
                 }
-                
+
                 saveHiddenItems(hidden);
                 updateRestoreButtons();
-                
+
                 // Update parent checkbox states after restoring
                 var checkedItems = getCheckedItems();
                 var listCheckboxes = parentList.querySelectorAll(':scope > .checklist-item .checklist-checkbox');
@@ -452,5 +452,20 @@
         document.addEventListener('DOMContentLoaded', initCheckboxes);
     } else {
         initCheckboxes();
+    }
+})();
+
+// Arrow toggle for details/summary elements
+(function () {
+    'use strict';
+    var ARROWS = { '\u25C0': '\u25BC', '\u25BC': '\u25C0' };
+    var details = document.querySelectorAll('details');
+    for (var i = 0; i < details.length; i++) {
+        details[i].addEventListener('toggle', function () {
+            var arrow = this.querySelector('summary .arrow-icon');
+            if (arrow && ARROWS[arrow.textContent]) {
+                arrow.textContent = ARROWS[arrow.textContent];
+            }
+        });
     }
 })();
