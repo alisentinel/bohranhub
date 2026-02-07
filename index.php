@@ -24,6 +24,12 @@ $site = $data['site'];
 $tags = $data['tags'];
 $tiles = $data['tiles'];
 
+// Helper: allow only harmless HTML tags in text content
+function safeTags($text)
+{
+    return strip_tags($text, '<b><i><strong><em><u><ul><ol><li><br><p><span><sub><sup><mark><small><del><ins><hr><code>');
+}
+
 // Helper to get tag label
 function getTagLabel($tags, $id)
 {
@@ -44,13 +50,13 @@ function renderChecklistItems($items, $parentId = '')
             <div class="checklist-item-content">
                 <label class="checklist-label">
                     <input type="checkbox" class="checklist-checkbox" data-item-id="<?= htmlspecialchars($itemId) ?>">
-                    <span class="checklist-text"><?= htmlspecialchars($item['text']) ?></span>
+                    <span class="checklist-text"><?= safeTags($item['text']) ?></span>
                 </label>
                 <button class="checklist-hide-btn" data-item-id="<?= htmlspecialchars($itemId) ?>" title="مخفی کردن"
                     aria-label="مخفی کردن این آیتم">×</button>
             </div>
             <?php if (!empty($item['description'])): ?>
-                <p class="checklist-description"><?= htmlspecialchars($item['description']) ?></p>
+                <div class="checklist-description"><?= safeTags($item['description']) ?></div>
             <?php endif; ?>
             <?php if ($hasChildren): ?>
                 <details>
@@ -79,9 +85,9 @@ function renderTile($tile, $tags, $depth = 0)
     ?>
     <article class="tile<?= $indentClass ?>" data-tags="<?= implode(',', $tile['tags']) ?>" role="article"
         aria-labelledby="tile-<?= md5($tile['title']) ?>">
-        <h3><?= !empty($tile['icon']) ? $tile['icon'] . '     ' : '' ?><?= htmlspecialchars($tile['title']) ?></h3>
+        <h3><?= !empty($tile['icon']) ? $tile['icon'] . '     ' : '' ?><?= safeTags($tile['title']) ?></h3>
         <?php if (!empty($tile['description'])): ?>
-            <p><?= htmlspecialchars($tile['description']) ?></p>
+            <p><?= safeTags($tile['description']) ?></p>
         <?php endif; ?>
         <?php if (in_array('cities', $tile['tags']) && $depth === 0): ?>
             <div class="search-container">
@@ -99,13 +105,13 @@ function renderTile($tile, $tags, $depth = 0)
                         <li>
                             <?php if ($link['url']): ?>
                                 <a href="<?= htmlspecialchars($link['url']) ?>">
-                                    <?= htmlspecialchars($link['text']) ?>
+                                    <?= safeTags($link['text']) ?>
                                 </a>
                             <?php else: ?>
-                                <strong><?= htmlspecialchars($link['text']) ?></strong>
+                                <strong><?= safeTags($link['text']) ?></strong>
                             <?php endif; ?>
                             <?php if (!empty($link['description'])): ?>
-                                <p class="link-description"><?= htmlspecialchars($link['description']) ?></p>
+                                <p class="link-description"><?= safeTags($link['description']) ?></p>
                             <?php endif; ?>
                         </li>
                     <?php endforeach; ?>
