@@ -46,7 +46,8 @@ function renderChecklistItems($items, $parentId = '')
                     <input type="checkbox" class="checklist-checkbox" data-item-id="<?= htmlspecialchars($itemId) ?>">
                     <span class="checklist-text"><?= htmlspecialchars($item['text']) ?></span>
                 </label>
-                <button class="checklist-hide-btn" data-item-id="<?= htmlspecialchars($itemId) ?>" title="مخفی کردن" aria-label="مخفی کردن این آیتم">×</button>
+                <button class="checklist-hide-btn" data-item-id="<?= htmlspecialchars($itemId) ?>" title="مخفی کردن"
+                    aria-label="مخفی کردن این آیتم">×</button>
             </div>
             <?php if (!empty($item['description'])): ?>
                 <p class="checklist-description"><?= htmlspecialchars($item['description']) ?></p>
@@ -54,7 +55,8 @@ function renderChecklistItems($items, $parentId = '')
             <?php if ($hasChildren): ?>
                 <ul class="checklist-nested">
                     <?php renderChecklistItems($item['children'], $itemId); ?>
-                    <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن آیتم(های) مخفی‌شده</button></li>
+                    <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن
+                            آیتم(های) مخفی‌شده</button></li>
                 </ul>
             <?php endif; ?>
         </li>
@@ -78,11 +80,12 @@ function renderTile($tile, $tags, $depth = 0)
         <?php endif; ?>
         <?php if (in_array('cities', $tile['tags']) && $depth === 0): ?>
             <div class="search-container">
-                <input type="text" id="city-search" class="search-input" placeholder="نام شهر را وارد کنید..." aria-label="جستجوی شهر">
+                <input type="text" id="city-search" class="search-input" placeholder="نام شهر را وارد کنید..."
+                    aria-label="جستجوی شهر">
                 <p id="city-search-result" class="search-result"></p>
             </div>
         <?php endif; ?>
-        
+
         <?php if ($hasLinks): ?>
             <details <?= $hasChildren ? '' : '' ?>>
                 <summary><?= count($tile['links']) ?> مورد</summary>
@@ -110,7 +113,8 @@ function renderTile($tile, $tags, $depth = 0)
                 <summary><?= count($tile['checklist']) ?> آیتم چک‌لیست</summary>
                 <ul class="checklist">
                     <?php renderChecklistItems($tile['checklist']); ?>
-                    <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن آیتم(های) مخفی‌شده</button></li>
+                    <li class="checklist-restore-item" style="display:none;"><button class="checklist-restore-btn">بازگرداندن
+                            آیتم(های) مخفی‌شده</button></li>
                 </ul>
             </details>
         <?php endif; ?>
