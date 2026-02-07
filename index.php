@@ -27,7 +27,14 @@ $tiles = $data['tiles'];
 // Helper: allow only harmless HTML tags in text content
 function safeTags($text)
 {
-    return strip_tags($text, '<b><i><strong><em><u><ul><ol><li><br><p><span><sub><sup><mark><small><del><ins><hr><code>');
+    // Temporarily protect <warning> tags from strip_tags
+    $text = preg_replace('/<warning>/i', '%%WARNING_OPEN%%', $text);
+    $text = preg_replace('/<\/warning>/i', '%%WARNING_CLOSE%%', $text);
+    $text = strip_tags($text, '<b><i><strong><em><u><ul><ol><li><br><p><span><sub><sup><mark><small><del><ins><hr><code>');
+    // Restore as styled <b>
+    $text = str_replace('%%WARNING_OPEN%%', '<b class="warning">', $text);
+    $text = str_replace('%%WARNING_CLOSE%%', '</b>', $text);
+    return $text;
 }
 
 // Helper to get tag label

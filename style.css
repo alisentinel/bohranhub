@@ -196,6 +196,11 @@ main {
     color: #1a1a1a
 }
 
+.warning {
+    color: #c62828;
+    font-weight: 700
+}
+
 .tile p {
     font-size: 0.95rem;
     color: #333;
@@ -203,10 +208,10 @@ main {
 }
 
 /* Inline HTML lists (from safeTags content) */
-.tile > ul,
-.tile > ol,
-.tile > p ul,
-.tile > p ol,
+.tile>ul,
+.tile>ol,
+.tile>p ul,
+.tile>p ol,
 .link-description ul,
 .link-description ol,
 .checklist-description ul,
@@ -217,9 +222,9 @@ main {
     padding-left: 0;
 }
 
-.tile > ul > li,
-.tile > ol > li,
-.tile > p li,
+.tile>ul>li,
+.tile>ol>li,
+.tile>p li,
 .link-description li,
 .checklist-description li {
     margin-bottom: 4px;
@@ -227,10 +232,10 @@ main {
     font-size: inherit;
 }
 
-.tile > ul ul,
-.tile > ol ol,
-.tile > ul ol,
-.tile > ol ul {
+.tile>ul ul,
+.tile>ol ol,
+.tile>ul ol,
+.tile>ol ul {
     margin: 4px 0;
     padding-right: 16px;
 }
@@ -379,6 +384,10 @@ details[open] summary {
     font-weight: 600;
     line-height: 1.4;
     transition: all 0.2s
+}
+
+.checklist-text b {
+    font-size: 1.05rem;
 }
 
 .checklist-description {
