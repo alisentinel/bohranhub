@@ -73,6 +73,70 @@
     if (tagsList) {
         tagsList.addEventListener('click', handleClick);
     }
+
+    // Initialize search within cities tile
+    var searchInput = document.getElementById('city-search');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            var query = e.target.value.trim().toLowerCase();
+            searchCities(query);
+        });
+    }
+
+    function searchCities(query) {
+        var searchInput = document.getElementById('city-search');
+        if (!searchInput) return;
+        
+        var resultElement = document.getElementById('city-search-result');
+        
+        // Find the parent tile that contains the search input
+        var parentTile = searchInput.closest('.tile');
+        if (!parentTile) return;
+        
+        // Find the children-container details element
+        var childrenDetails = parentTile.querySelector('.children-container');
+        
+        // Get all nested tiles within this parent
+        var nestedTiles = parentTile.querySelectorAll('.tile-nested');
+        
+        // If empty query, show all nested tiles and clear result
+        if (!query) {
+            for (var i = 0; i < nestedTiles.length; i++) {
+                nestedTiles[i].classList.remove('hidden');
+            }
+            if (resultElement) resultElement.textContent = '';
+            return;
+        }
+
+        // Open the details element to show cities
+        if (childrenDetails) {
+            childrenDetails.open = true;
+        }
+
+        // Filter nested tiles based on query and count visible ones
+        var visibleCount = 0;
+        for (var j = 0; j < nestedTiles.length; j++) {
+            var nestedTitle = nestedTiles[j].querySelector('h3');
+            if (nestedTitle) {
+                var titleText = nestedTitle.textContent.toLowerCase();
+                if (titleText.indexOf(query) !== -1) {
+                    nestedTiles[j].classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    nestedTiles[j].classList.add('hidden');
+                }
+            }
+        }
+        
+        // Update result message
+        if (resultElement) {
+            if (visibleCount === 0) {
+                resultElement.textContent = 'شهری یافت نشد';
+            } else {
+                resultElement.textContent = visibleCount + ' شهر یافت شد';
+            }
+        }
+    }
 })();
 
 // BohranHub - Checklist State Management (Cookie-based)

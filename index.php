@@ -76,6 +76,12 @@ function renderTile($tile, $tags, $depth = 0)
         <?php if (!empty($tile['description'])): ?>
             <p><?= htmlspecialchars($tile['description']) ?></p>
         <?php endif; ?>
+        <?php if (in_array('cities', $tile['tags']) && $depth === 0): ?>
+            <div class="search-container">
+                <input type="text" id="city-search" class="search-input" placeholder="نام شهر را وارد کنید..." aria-label="جستجوی شهر">
+                <p id="city-search-result" class="search-result"></p>
+            </div>
+        <?php endif; ?>
         
         <?php if ($hasLinks): ?>
             <details <?= $hasChildren ? '' : '' ?>>
