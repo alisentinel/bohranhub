@@ -725,7 +725,7 @@
         {
           "text": "پیست‌هاب",
           "url": "https://pastehub.ir",
-          "description": "جهت آپلود فایل بر روی گزینه همرسانی فایل کلیک کنید."
+          "description": "<p>جهت آپلود فایل بر روی گزینه همرسانی فایل کلیک کنید.</p><p>حداکثر حجم: ۵۰ مگابایت</p>"
         },
         {
           "text": "آپلود کن",
@@ -733,7 +733,8 @@
         },
         {
           "text": "آآپلود",
-          "url": "https://uupload.ir"
+          "url": "https://uupload.ir",
+          "description": "<p>پسوندهای مجاز:</p><p>.JPEG, .JPG, .GIF, .PNG, .BMP, .ZIP, .RAR, .MP3, .MP4, .OGG, .WAV, .AVI, .MPG, .3GP, .SWF, .PDF, .DOC, .DOCX, .PPT, .PPTX, .PPS, .PPSX, .XLS, .XLSX, .TXT, .PSD, .TIF, .ICO,& ...</p><p>حداکثر حجم: ۵۰ مگابایت</p>"
         },
         {
           "text": "فایلز",
