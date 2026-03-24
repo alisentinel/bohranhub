@@ -369,7 +369,7 @@
         },
         {
           "text": "نشان",
-          "url": "https://nashan.org"
+          "url": "https://neshan.org"
         },
         {
           "text": "بلد",
@@ -387,11 +387,26 @@
       ],
       "links": [
         {
-          "text": "فیلیمو",
+          "text": "موبوموویز",
+          "url": "https://mobomovies.co/",
+          "description": "رایگان و بدون سانسور - با اینترنت"
+        },
+        {
+          "text": "سینما تیکا",
+          "url": "https://cinema-tika.com/",
+          "description": "رایگان و بدون سانسور - با اینترنت"
+        },
+        {
+          "text": "فیلم۲مدیا",
+          "url": "https://www.myf2m.org/",
+          "description": "بدون حذفیات همراه با دوبله فارسی. فیلم‌های حاوی صحنه‌های جنسی در سایت موجود نیست."
+        },
+        {
+          "text": "فیلیمو (اشتراکی و با سانسور)",
           "url": "https://filimo.com"
         },
         {
-          "text": "بخش فیلم و سریال تلویبیون",
+          "text": "بخش فیلم و سریال تلویبیون (با سانسور)",
           "url": "https://telewebion.com/space/MovieSeries"
         },
         {
@@ -399,11 +414,11 @@
           "url": "https://telewebion.com"
         },
         {
-          "text": "نماوا",
+          "text": "نماوا (اشتراکی و با سانسور)",
           "url": "https://namava.ir"
         },
         {
-          "text": "آپارات",
+          "text": "آپارات (با سانسور)",
           "url": "https://aparat.com"
         }
       ]
