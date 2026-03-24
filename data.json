@@ -378,6 +378,38 @@
       ]
     },
     {
+      "icon": "🎶",
+      "title": "آهنگ",
+      "description": "پلتفرم‌های داخلی برای بارگزاری آهنگ، ریمیکس یا موسیقی",
+      "tags": [
+        "music",
+        "useful"
+      ],
+      "links": [
+        {
+          "text": "ملودیفای",
+          "url": "https://melodify.app/"
+        },
+        {
+          "text": "رپاپ",
+          "url": "https://rapop.ir/"
+        },
+        {
+          "text": "تیارین",
+          "url": "https://tiarin.ir/",
+          "description": "پلی‌لیست‌های خاطره‌انگیز و نوستالژیک"
+        },
+        {
+          "text": "سویل موزیک",
+          "url": "https://sevilmusics.com/"
+        },
+        {
+          "text": "آپ موزیکس (آهنگ‌های مجوزدار)",
+          "url": "https://upmusics.com/"
+        }
+      ]
+    },
+    {
       "icon": "🎬",
       "title": "فیلم و سریال",
       "description": "پلتفرم‌های داخلی برای تماشای فیلم و سریال آنلاین",
