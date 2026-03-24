@@ -90,13 +90,14 @@ function renderTile($tile, $tags, $depth = 0)
     $hasChecklist = !empty($tile['checklist']);
     $indentClass = $depth > 0 ? ' tile-nested tile-depth-' . $depth : '';
     ?>
-    <article class="tile<?= $indentClass ?>" data-tags="<?= implode(',', $tile['tags']) ?>" role="article"
-        aria-labelledby="tile-<?= md5($tile['title']) ?>">
+    <article class="tile<?= $indentClass ?>"
+        data-tags="<?php if (isset($tile['tags']) && is_array($tile['tags'])): ?><?= implode(',', $tile['tags']) ?><?php else: ?>none<?php endif; ?>"
+        role="article" aria-labelledby="tile-<?= md5($tile['title']) ?>">
         <h3><?= !empty($tile['icon']) ? $tile['icon'] . '     ' : '' ?><?= safeTags($tile['title']) ?></h3>
         <?php if (!empty($tile['description'])): ?>
             <p><?= safeTags($tile['description']) ?></p>
         <?php endif; ?>
-        <?php if (in_array('cities', $tile['tags']) && $depth === 0): ?>
+        <?php if (isset($tile['tags']) && in_array('cities', $tile['tags']) && $depth === 0): ?>
             <div class="search-container">
                 <input type="text" id="city-search" class="search-input" placeholder="نام شهر را وارد کنید..."
                     aria-label="جستجوی شهر">
@@ -139,7 +140,17 @@ function renderTile($tile, $tags, $depth = 0)
 
         <?php if ($hasChildren): ?>
             <details class="children-container">
-                <summary><span class="arrow-icon">◀</span> <?= count($tile['children']) ?> شهر</summary>
+                <summary>
+                    <span class="arrow-icon">◀</span> 
+                    <?= count($tile['children']) ?>
+                    <?php
+                        if (isset($tile['tags']) && in_array('cities', $tile['tags']) && $depth === 0) {
+                            echo " شهر";
+                        } else {
+                            echo " مورد";
+                        }
+                    ?>
+                </summary>
                 <div class="nested-tiles">
                     <?php foreach ($tile['children'] as $child): ?>
                         <?php renderTile($child, $tags, $depth + 1); ?>
@@ -148,11 +159,13 @@ function renderTile($tile, $tags, $depth = 0)
             </details>
         <?php endif; ?>
 
-        <div class="tile-tags">
-            <?php foreach ($tile['tags'] as $tagId): ?>
-                <span class="tile-tag">#<?= htmlspecialchars(getTagLabel($tags, $tagId)) ?></span>
-            <?php endforeach; ?>
-        </div>
+        <?php if (isset($tile['tags']) && is_array($tile['tags'])) { ?>
+            <div class="tile-tags">
+                <?php foreach ($tile['tags'] as $tagId): ?>
+                    <span class="tile-tag">#<?= htmlspecialchars(getTagLabel($tags, $tagId)) ?></span>
+                <?php endforeach; ?>
+            </div>
+        <?php } ?>
     </article>
     <?php
 }
