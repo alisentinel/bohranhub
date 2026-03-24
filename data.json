@@ -1024,7 +1024,7 @@
       "title": "لیست میرور",
       "description": "لیست میرور های داخلی مناسب برای برنامه‌نویسی در شرایط قطعی اینترنت",
       "tags": [
-        "search-engine"
+        "programming"
       ],
       "children": [
         {
@@ -1051,60 +1051,60 @@
               "url": "https://mirror.shatel.ir"
             },
             {
-              "id": "Afranet Mirror",
-              "label": "http://mirror.afranet.com/"
+              "text": "Afranet Mirror",
+              "url": "http://mirror.afranet.com/"
             },
             {
-              "id": "صفر و یک",
-              "label": "https://mirror.0-1.cloud/"
+              "text": "صفر و یک",
+              "url": "https://mirror.0-1.cloud/"
             },
             {
-              "id": "Amini DataCenter",
-              "label": "https://mirror.aminidc.com/"
+              "text": "Amini DataCenter",
+              "url": "https://mirror.aminidc.com/"
             },
             {
-              "id": "Atlantis Mirrors",
-              "label": "https://mirror.atlantiscloud.ir/"
+              "text": "Atlantis Mirrors",
+              "url": "https://mirror.atlantiscloud.ir/"
             },
             {
-              "id": "Farasoo",
-              "label": "https://mirror.faraso.org/"
+              "text": "Farasoo",
+              "url": "https://mirror.faraso.org/"
             },
             {
-              "id": "IranServer Mirrors",
-              "label": "https://mirror.iranserver.com/"
+              "text": "IranServer Mirrors",
+              "url": "https://mirror.iranserver.com/"
             },
             {
-              "id": "مخزن ملی منابع متن‌باز",
-              "label": "https://repo-portal.ito.gov.ir/repo/"
+              "text": "مخزن ملی منابع متن‌باز",
+              "url": "https://repo-portal.ito.gov.ir/repo/"
             },
             {
-              "id": "KimiaHost",
-              "label": "https://ubuntu-mirror.kimiahost.com/"
+              "text": "KimiaHost",
+              "url": "https://ubuntu-mirror.kimiahost.com/"
             },
             {
-              "id": "Liara Mirrors",
-              "label": "https://liara.ir/mirrors/"
+              "text": "Liara Mirrors",
+              "url": "https://liara.ir/mirrors/"
             },
             {
-              "id": "MobinHost Mirrors",
-              "label": "https://mirror.mobinhost.com/"
+              "text": "MobinHost Mirrors",
+              "url": "https://mirror.mobinhost.com/"
             },
             {
-              "id": "PardisCo Mirrors",
-              "label": "https://mirrors.pardisco.co/"
+              "text": "PardisCo Mirrors",
+              "url": "https://mirrors.pardisco.co/"
             },
             {
-              "id": "ParsDev",
-              "label": "https://mirror.parsdev.com/"
+              "text": "ParsDev",
+              "url": "https://mirror.parsdev.com/"
             },
             {
-              "id": "Pishgaman Ubuntu Mirror",
-              "label": "https://ubuntu.pishgaman.net/cdimage/"
+              "text": "Pishgaman Ubuntu Mirror",
+              "url": "https://ubuntu.pishgaman.net/cdimage/"
             },
             {
-              "id": "Ubuntu Official IR Archive",
-              "label": "https://ir.archive.ubuntu.com/ubuntu/"
+              "text": "Ubuntu Official IR Archive",
+              "url": "https://ir.archive.ubuntu.com/ubuntu/"
             }
           ]
         }
