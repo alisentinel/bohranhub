@@ -1107,6 +1107,77 @@
               "url": "https://ir.archive.ubuntu.com/ubuntu/"
             }
           ]
+        },
+        {
+          "title": "رجیستری‌های داکر",
+          "links": [
+            {
+              "text": "ArvanCloud",
+              "url": "https://arvancloud.ir/fa/dev/docker"
+            },
+            {
+              "text": "MobinHost",
+              "url": "https://docker.mobinhost.com"
+            },
+            {
+              "text": "Paradis Co",
+              "url": "https://mirrors.pardisco.co/posts/docker"
+            },
+            {
+              "text": "Focker",
+              "url": "https://focker.ir"
+            },
+            {
+              "text": "Docker Kernel",
+              "url": "https://docker.kernel.ir"
+            }
+          ]
+        },
+        {
+          "title": "ریپو های maven",
+          "links": [
+            {
+              "text": "مایکت",
+              "url": "https://maven.myket.ir"
+            },
+            {
+              "text": "جامکو",
+              "url": "https://jamko.ir"
+            }
+          ]
+        },
+        {
+          "title": "میرور های ابزار های مرسوم مانند npm و pypi",
+          "links": [
+            {
+              "text": "Runflare Mirrors",
+              "url": "https://runflare.com/mirrors"
+            },
+            {
+              "text": "ArvanCloud Mirrors",
+              "url": "https://lib.arvancloud.ir"
+            },
+            {
+              "text": "Paradis Co Mirrors",
+              "url": "https://mirrors.pardisco.co"
+            },
+            {
+              "text": "IranServer Mirrors",
+              "url": "https://mirror.iranserver.com"
+            },
+            {
+              "text": "HyperCloud Mirrors",
+              "url": "https://mirrors.hyperclouds.ir"
+            },
+            {
+              "text": "چابکان",
+              "url": "https://iran.chabokan.net/#services"
+            },
+            {
+              "text": "Rust Mirrors",
+              "url": "https://index.rust-meetup.ir"
+            }
+          ]
         }
       ]
     }
