@@ -45,6 +45,10 @@
       "label": "🎵 آهنگ"
     },
     {
+      "id": "programming",
+      "label": "💻 برنامه‌نویسی"
+    },
+    {
       "id": "education",
       "label": "📚 آموزش"
     },
@@ -289,7 +293,8 @@
       "title": "هوش مصنوعی",
       "tags": [
         "ai",
-        "useful"
+        "useful",
+        "programming"
       ],
       "links": [
         {
@@ -1009,6 +1014,97 @@
             },
             {
               "text": "طناب بکسل"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "💻",
+      "title": "لیست میرور",
+      "description": "لیست میرور های داخلی مناسب برای برنامه‌نویسی در شرایط قطعی اینترنت",
+      "tags": [
+        "search-engine"
+      ],
+      "children": [
+        {
+          "title": "میرور های لینوکس",
+          "links": [
+            {
+              "text": "ArvanCloud Mirror",
+              "url": "https://mirror.arvancloud.ir"
+            },
+            {
+              "text": "IranServer Mirror",
+              "url": "https://mirror.iranserver.com"
+            },
+            {
+              "text": "MobinHost Mirror",
+              "url": "https://mirror.mobinhost.com"
+            },
+            {
+              "text": "IUT Repository",
+              "url": "https://repo.iut.ac.ir"
+            },
+            {
+              "text": "Shatel Mirror",
+              "url": "https://mirror.shatel.ir"
+            },
+            {
+              "id": "Afranet Mirror",
+              "label": "http://mirror.afranet.com/"
+            },
+            {
+              "id": "صفر و یک",
+              "label": "https://mirror.0-1.cloud/"
+            },
+            {
+              "id": "Amini DataCenter",
+              "label": "https://mirror.aminidc.com/"
+            },
+            {
+              "id": "Atlantis Mirrors",
+              "label": "https://mirror.atlantiscloud.ir/"
+            },
+            {
+              "id": "Farasoo",
+              "label": "https://mirror.faraso.org/"
+            },
+            {
+              "id": "IranServer Mirrors",
+              "label": "https://mirror.iranserver.com/"
+            },
+            {
+              "id": "مخزن ملی منابع متن‌باز",
+              "label": "https://repo-portal.ito.gov.ir/repo/"
+            },
+            {
+              "id": "KimiaHost",
+              "label": "https://ubuntu-mirror.kimiahost.com/"
+            },
+            {
+              "id": "Liara Mirrors",
+              "label": "https://liara.ir/mirrors/"
+            },
+            {
+              "id": "MobinHost Mirrors",
+              "label": "https://mirror.mobinhost.com/"
+            },
+            {
+              "id": "PardisCo Mirrors",
+              "label": "https://mirrors.pardisco.co/"
+            },
+            {
+              "id": "ParsDev",
+              "label": "https://mirror.parsdev.com/"
+            },
+            {
+              "id": "Pishgaman Ubuntu Mirror",
+              "label": "https://ubuntu.pishgaman.net/cdimage/"
+            },
+            {
+              "id": "Ubuntu Official IR Archive",
+              "label": "https://ir.archive.ubuntu.com/ubuntu/"
             }
           ]
         }
