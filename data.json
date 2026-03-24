@@ -30,7 +30,7 @@
     },
     {
       "id": "ai",
-      "label": "هوش مصنوعی"
+      "label": "🧠 هوش مصنوعی"
     },
     {
       "id": "نقشه و مسیریابی",
@@ -38,19 +38,23 @@
     },
     {
       "id": "film",
-      "label": "فیلم و سریال"
+      "label": "🎬 فیلم و سریال"
+    },
+    {
+      "id": "music",
+      "label": "🎵 آهنگ"
     },
     {
       "id": "education",
-      "label": "آموزش"
+      "label": "📚 آموزش"
     },
     {
       "id": "travel",
-      "label": "سفر"
+      "label": "✈️ سفر"
     },
     {
       "id": "email",
-      "label": "ایمیل"
+      "label": "✉️ ایمیل"
     },
     {
       "id": "health",
@@ -82,7 +86,7 @@
     },
     {
       "id": "radio",
-      "label": "رادیو"
+      "label": "📻 رادیو"
     },
     {
       "id": "natural-disaster",
@@ -378,103 +382,6 @@
       ]
     },
     {
-      "icon": "🎶",
-      "title": "آهنگ",
-      "description": "پلتفرم‌های داخلی برای بارگزاری آهنگ، ریمیکس یا موسیقی",
-      "tags": [
-        "music",
-        "useful"
-      ],
-      "links": [
-        {
-          "text": "ملودیفای",
-          "url": "https://melodify.app/"
-        },
-        {
-          "text": "رپاپ",
-          "url": "https://rapop.ir/"
-        },
-        {
-          "text": "تیارین",
-          "url": "https://tiarin.ir/",
-          "description": "پلی‌لیست‌های خاطره‌انگیز و نوستالژیک"
-        },
-        {
-          "text": "سویل موزیک",
-          "url": "https://sevilmusics.com/"
-        },
-        {
-          "text": "آپ موزیکس (آهنگ‌های مجوزدار)",
-          "url": "https://upmusics.com/"
-        }
-      ]
-    },
-    {
-      "icon": "🎬",
-      "title": "فیلم و سریال",
-      "description": "پلتفرم‌های داخلی برای تماشای فیلم و سریال آنلاین",
-      "tags": [
-        "film",
-        "useful"
-      ],
-      "links": [
-        {
-          "text": "سریال بلاگ (پیشنهادی - بدون سانسور)",
-          "url": "https://serialblog.net",
-          "description": "آرشیو کامل فیلم و سریال - بدون حذفیات - در دسترس حتی با اینترنت داخلی"
-        },
-        {
-          "text": "موبوموویز",
-          "url": "https://mobomovies.co/",
-          "description": "رایگان و بدون سانسور - با اینترنت"
-        },
-        {
-          "text": "سینما تیکا",
-          "url": "https://cinema-tika.com/",
-          "description": "رایگان و بدون سانسور - با اینترنت"
-        },
-        {
-          "text": "فیلم۲مدیا",
-          "url": "https://www.myf2m.org/",
-          "description": "بدون حذفیات همراه با دوبله فارسی. فیلم‌های حاوی صحنه‌های جنسی زیاد در این سایت موجود نیست."
-        },
-        {
-          "text": "دنیای سریال (بدون سانسور)",
-          "url": "https://dls2.iran-gamecenter-host.com/DonyayeSerial/",
-          "description": "این سایت شامل دسته‌بندی‌های مختلف سریال‌ها و آرشیو های مختلف آفلاین و آنلاین هست، برای جستجو بین لینک‌ها از جستجوی مرورگر استفاده کنید."
-        },
-        {
-          "text": "جستجوگر دنیای سریال (بدون سانسور)",
-          "url": "https://dls6.iran-gamecenter-host.com/DonyayeSerial/10_thous.html"
-        },
-        {
-          "text": "فیلماز (اشتراکی - با سانسور)",
-          "url": "https://www.filmaz.ir/",
-          "description": "شامل فیلم‌های ایرانی"
-        },
-        {
-          "text": "فیلیمو (اشتراکی و با سانسور)",
-          "url": "https://filimo.com"
-        },
-        {
-          "text": "بخش فیلم و سریال تلویبیون (با سانسور)",
-          "url": "https://telewebion.com/space/MovieSeries"
-        },
-        {
-          "text": "تلویبیون (صدا و سیمای آنلاین)",
-          "url": "https://telewebion.com"
-        },
-        {
-          "text": "نماوا (اشتراکی و با سانسور)",
-          "url": "https://namava.ir"
-        },
-        {
-          "text": "آپارات (با سانسور)",
-          "url": "https://aparat.com"
-        }
-      ]
-    },
-    {
       "icon": "🏙️",
       "title": "شهرهای ایران",
       "description": "اطلاعات و خدمات مرتبط با شهرهای مختلف ایران",
@@ -650,6 +557,103 @@
               "url": "https://air.kermanshah.ir"
             }
           ]
+        }
+      ]
+    },
+    {
+      "icon": "🎶",
+      "title": "آهنگ",
+      "description": "پلتفرم‌های داخلی برای بارگزاری آهنگ، ریمیکس یا موسیقی",
+      "tags": [
+        "music",
+        "useful"
+      ],
+      "links": [
+        {
+          "text": "ملودیفای",
+          "url": "https://melodify.app/"
+        },
+        {
+          "text": "رپاپ",
+          "url": "https://rapop.ir/"
+        },
+        {
+          "text": "تیارین",
+          "url": "https://tiarin.ir/",
+          "description": "پلی‌لیست‌های خاطره‌انگیز و نوستالژیک"
+        },
+        {
+          "text": "سویل موزیک",
+          "url": "https://sevilmusics.com/"
+        },
+        {
+          "text": "آپ موزیکس (آهنگ‌های مجوزدار)",
+          "url": "https://upmusics.com/"
+        }
+      ]
+    },
+    {
+      "icon": "🎬",
+      "title": "فیلم و سریال",
+      "description": "پلتفرم‌های داخلی برای تماشای فیلم و سریال آنلاین",
+      "tags": [
+        "film",
+        "useful"
+      ],
+      "links": [
+        {
+          "text": "سریال بلاگ (پیشنهادی - بدون سانسور)",
+          "url": "https://serialblog.net",
+          "description": "آرشیو کامل فیلم و سریال - بدون حذفیات - در دسترس حتی با اینترنت داخلی"
+        },
+        {
+          "text": "موبوموویز",
+          "url": "https://mobomovies.co/",
+          "description": "رایگان و بدون سانسور - با اینترنت"
+        },
+        {
+          "text": "سینما تیکا",
+          "url": "https://cinema-tika.com/",
+          "description": "رایگان و بدون سانسور - با اینترنت"
+        },
+        {
+          "text": "فیلم۲مدیا",
+          "url": "https://www.myf2m.org/",
+          "description": "بدون حذفیات همراه با دوبله فارسی. فیلم‌های حاوی صحنه‌های جنسی زیاد در این سایت موجود نیست."
+        },
+        {
+          "text": "دنیای سریال (بدون سانسور)",
+          "url": "https://dls2.iran-gamecenter-host.com/DonyayeSerial/",
+          "description": "این سایت شامل دسته‌بندی‌های مختلف سریال‌ها و آرشیو های مختلف آفلاین و آنلاین هست، برای جستجو بین لینک‌ها از جستجوی مرورگر استفاده کنید."
+        },
+        {
+          "text": "جستجوگر دنیای سریال (بدون سانسور)",
+          "url": "https://dls6.iran-gamecenter-host.com/DonyayeSerial/10_thous.html"
+        },
+        {
+          "text": "فیلماز (اشتراکی - با سانسور)",
+          "url": "https://www.filmaz.ir/",
+          "description": "شامل فیلم‌های ایرانی"
+        },
+        {
+          "text": "فیلیمو (اشتراکی و با سانسور)",
+          "url": "https://filimo.com"
+        },
+        {
+          "text": "بخش فیلم و سریال تلویبیون (با سانسور)",
+          "url": "https://telewebion.com/space/MovieSeries"
+        },
+        {
+          "text": "تلویبیون (صدا و سیمای آنلاین)",
+          "url": "https://telewebion.com"
+        },
+        {
+          "text": "نماوا (اشتراکی و با سانسور)",
+          "url": "https://namava.ir"
+        },
+        {
+          "text": "آپارات (با سانسور)",
+          "url": "https://aparat.com"
         }
       ]
     },
