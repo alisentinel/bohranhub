@@ -111,7 +111,7 @@ function renderTile($tile, $tags, $depth = 0)
                     <?php foreach ($tile['links'] as $link): ?>
                         <li>
                             <?php if ($link['url']): ?>
-                                <a href="<?= htmlspecialchars($link['url']) ?>">
+                                <a href="<?= htmlspecialchars($link['url']) ?>" target="_blank" rel="noopener">
                                     <?= safeTags($link['text']) ?>
                                 </a>
                             <?php else: ?>
