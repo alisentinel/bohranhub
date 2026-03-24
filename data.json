@@ -1022,7 +1022,7 @@
     {
       "icon": "💻",
       "title": "لیست میرور",
-      "description": "لیست میرور های داخلی مناسب برای برنامه‌نویسی در شرایط قطعی اینترنت",
+      "description": "لیست میرور های داخلی مناسب برای برنامه‌نویسی در شرایط قطعی اینترنت. در توضیحات هر مورد لیست میرور ها اعلام شده است. اعتبارسنجی آیتم‌ها برعهده کاربر می‌باشد.",
       "tags": [
         "programming"
       ],
@@ -1119,7 +1119,7 @@
         {
           "text": "جامکو",
           "url": "https://jamko.ir",
-          "description": "Maven"
+          "description": "Gradle, Maven, Debian, Android SDK, yarn, Composer, nuget, python, kubernetes, helm, npm, rpm, docker"
         }
       ]
     }
