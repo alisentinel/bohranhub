@@ -1026,158 +1026,100 @@
       "tags": [
         "programming"
       ],
-      "children": [
+      "links": [
         {
-          "title": "میرور های لینوکس",
-          "links": [
-            {
-              "text": "ArvanCloud Mirror",
-              "url": "https://mirror.arvancloud.ir"
-            },
-            {
-              "text": "IranServer Mirror",
-              "url": "https://mirror.iranserver.com"
-            },
-            {
-              "text": "MobinHost Mirror",
-              "url": "https://mirror.mobinhost.com"
-            },
-            {
-              "text": "IUT Repository",
-              "url": "https://repo.iut.ac.ir"
-            },
-            {
-              "text": "Shatel Mirror",
-              "url": "https://mirror.shatel.ir"
-            },
-            {
-              "text": "Afranet Mirror",
-              "url": "http://mirror.afranet.com/"
-            },
-            {
-              "text": "صفر و یک",
-              "url": "https://mirror.0-1.cloud/"
-            },
-            {
-              "text": "Amini DataCenter",
-              "url": "https://mirror.aminidc.com/"
-            },
-            {
-              "text": "Atlantis Mirrors",
-              "url": "https://mirror.atlantiscloud.ir/"
-            },
-            {
-              "text": "Farasoo",
-              "url": "https://mirror.faraso.org/"
-            },
-            {
-              "text": "IranServer Mirrors",
-              "url": "https://mirror.iranserver.com/"
-            },
-            {
-              "text": "مخزن ملی منابع متن‌باز",
-              "url": "https://repo-portal.ito.gov.ir/repo/"
-            },
-            {
-              "text": "KimiaHost",
-              "url": "https://ubuntu-mirror.kimiahost.com/"
-            },
-            {
-              "text": "Liara Mirrors",
-              "url": "https://liara.ir/mirrors/"
-            },
-            {
-              "text": "MobinHost Mirrors",
-              "url": "https://mirror.mobinhost.com/"
-            },
-            {
-              "text": "PardisCo Mirrors",
-              "url": "https://mirrors.pardisco.co/"
-            },
-            {
-              "text": "ParsDev",
-              "url": "https://mirror.parsdev.com/"
-            },
-            {
-              "text": "Pishgaman Ubuntu Mirror",
-              "url": "https://ubuntu.pishgaman.net/cdimage/"
-            },
-            {
-              "text": "Ubuntu Official IR Archive",
-              "url": "https://ir.archive.ubuntu.com/ubuntu/"
-            }
-          ]
+          "text": "ArvanCloud Mirror",
+          "url": "https://mirror.arvancloud.ir",
+          "description": "Ubuntu, Debian, Alpine, Arch Linux, Manjaro, CentOS, OpenSuse"
         },
         {
-          "title": "رجیستری‌های داکر",
-          "links": [
-            {
-              "text": "ArvanCloud",
-              "url": "https://arvancloud.ir/fa/dev/docker"
-            },
-            {
-              "text": "MobinHost",
-              "url": "https://docker.mobinhost.com"
-            },
-            {
-              "text": "Paradis Co",
-              "url": "https://mirrors.pardisco.co/posts/docker"
-            },
-            {
-              "text": "Focker",
-              "url": "https://focker.ir"
-            },
-            {
-              "text": "Docker Kernel",
-              "url": "https://docker.kernel.ir"
-            }
-          ]
+          "text": "IranServer Mirror",
+          "url": "https://mirror.iranserver.com",
+          "description": "Ubuntu, Debian, AlmaLinux, Manjaro, CentOS, EPEL Repository, Docker, Python PIP, Node.js NPM, ClamAV, Windows ISO,  VMware ESXi, Proxmox, Rancher & Harvester, ISO Downloads"
         },
         {
-          "title": "ریپو های maven",
-          "links": [
-            {
-              "text": "مایکت",
-              "url": "https://maven.myket.ir"
-            },
-            {
-              "text": "جامکو",
-              "url": "https://jamko.ir"
-            }
-          ]
+          "text": "MobinHost Mirror",
+          "url": "https://mirror.mobinhost.com",
+          "description": "FreeBSD, HPE, almalinux, alpine, archlinux, bigbluebutton, debian, debian-backports, debian-cd, debian-security, epel, fedora, hpe-bios, manjaro, mariadb, mongodb, plesk, raspbian, scripts, ubuntu, ubuntu-releases, vmware, zabbix"
         },
         {
-          "title": "میرور های ابزار های مرسوم مانند npm و pypi",
-          "links": [
-            {
-              "text": "Runflare Mirrors",
-              "url": "https://runflare.com/mirrors"
-            },
-            {
-              "text": "ArvanCloud Mirrors",
-              "url": "https://lib.arvancloud.ir"
-            },
-            {
-              "text": "Paradis Co Mirrors",
-              "url": "https://mirrors.pardisco.co"
-            },
-            {
-              "text": "IranServer Mirrors",
-              "url": "https://mirror.iranserver.com"
-            },
-            {
-              "text": "HyperCloud Mirrors",
-              "url": "https://mirrors.hyperclouds.ir"
-            },
-            {
-              "text": "چابکان",
-              "url": "https://iran.chabokan.net/#services"
-            },
-            {
-              "text": "Rust Mirrors",
-              "url": "https://index.rust-meetup.ir"
-            }
-          ]
+          "text": "IUT Repository",
+          "url": "https://repo.iut.ac.ir",
+          "description": "Rocky Linux, Debian, Ubuntu, Mint, Arch Linux, Raspbian, Fedora, Alpine Linux, Manjaro, OpenSUSE, CTAN, OpenBSD"
+        },
+        {
+          "text": "Shatel Mirror",
+          "url": "https://mirror.shatel.ir",
+          "description": "Ubuntu, Debian, Kali Linux"
+        },
+        {
+          "text": "Afranet Mirror",
+          "url": "http://mirror.afranet.com/",
+          "description": "CentOS, Debian, Ubuntu"
+        },
+        {
+          "text": "صفر و یک",
+          "url": "https://mirror.0-1.cloud/",
+          "description": "almalinux, alpine, archlinux, centos, debian, debian-backports, debian-cd, debian-iso, debian-security, epel, freebsd, manjaro, mariadb, raspbian, ubuntu, ubuntu-releases, windows, 10000mb.bin"
+        },
+        {
+          "text": "Amini DataCenter",
+          "url": "https://mirror.aminidc.com/",
+          "description": "almalinux, debian, debian-cd, epel, fio, hpe, html, linuxmint, nvidia-container-toolkit, redhat, rocky, ubuntu, ubuntu-releases, windows, aminidc-centos-7, aminidc-epel-7, aminidc-fedora"
+        },
+        {
+          "text": "Atlantis Mirrors",
+          "url": "https://mirror.atlantiscloud.ir/",
+          "description": "NPM, Docker, Ubuntu, Debian"
+        },
+        {
+          "text": "Faraso",
+          "url": "https://mirror.faraso.org/",
+          "description": "centOS, EPEL, JDK, JRE, javase8, vnc, virtz files, whmcs"
+        },
+        {
+          "text": "مخزن ملی منابع متن‌باز",
+          "url": "https://repo-portal.ito.gov.ir/repo/",
+          "description": "Ubuntu, centOS, Debian, Debian-Security, Fedora, LinuxMint, Rocky, OpenSUSE, AltLinux, AlmaLinux, Mageia, openmandriva, Azure-cli, Docker-CE, Google-Chrome, Grafana, InfluxDB, Kupernetes, mongodb, mysql, opera, vscode, virtualbox, composer, npm, python, gradle, maven"
+        },
+        {
+          "text": "KimiaHost",
+          "url": "https://ubuntu-mirror.kimiahost.com/"
+        },
+        {
+          "text": "Liara Mirrors",
+          "url": "https://liara.ir/mirrors/",
+          "description": "Github, Dockerhub, Quay, Microsoft, K8S, PyPi, NPM, Go, NuGet, Composer, Debian, Ubuntu, CentOS, Fedora, Rocky, Alpine, OpenSUSE, Arch, Manjaro"
+        },
+        {
+          "text": "PardisCo Mirrors",
+          "url": "https://mirrors.pardisco.co/",
+          "description": "Ubuntu & Ubuntu-CD, Debian & Debian-CD, CentOS, Alpine Linux, PyPI, NPM, Go, NuGet, Docker Registry, OmniOS, PkgSrc"
+        },
+        {
+          "text": "ParsDev",
+          "url": "https://mirror.parsdev.com/",
+          "description": "Almalinux, debian, tools, ubuntu, ubuntu-releases"
+        },
+        {
+          "text": "Pishgaman Ubuntu Mirror",
+          "url": "https://ubuntu.pishgaman.net/cdimage/",
+          "description": "Ubuntu"
+        },
+        {
+          "text": "Ubuntu Official IR Archive",
+          "url": "https://ir.archive.ubuntu.com/ubuntu/",
+          "description": "Ubuntu"
+        },
+        {
+          "text": "مایکت",
+          "url": "https://maven.myket.ir",
+          "description": "Maven"
+        },
+        {
+          "text": "جامکو",
+          "url": "https://jamko.ir",
+          "description": "Maven"
         }
       ]
     }
