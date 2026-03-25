@@ -1122,6 +1122,24 @@
           "description": "Gradle, Maven, Debian, Android SDK, yarn, Composer, nuget, python, kubernetes, helm, npm, rpm, docker"
         }
       ]
+    },
+    {
+      "icon": "💻",
+      "title": "ابزار های برنامه‌نویسی",
+      "description": "مجموعه‌ای از ابزار های برنامه‌نویسی که در زمان قطعی اینترنت کاربرد دارند.",
+      "tags": [
+        "programming"
+      ],
+      "links": [
+        {
+          "text": "گیت‌لب داخلی",
+          "url": "https://gitlab.aranserver.com/"
+        },
+        {
+          "text": "Jitsi Meet",
+          "url": "https://meet.aranserver.com/"
+        }
+      ]
     }
   ]
 }
