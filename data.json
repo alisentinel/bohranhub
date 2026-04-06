@@ -37,6 +37,10 @@
       "label": "نقشه و مسیریابی"
     },
     {
+      "id": "books",
+      "label": "📚 کتاب و پادکست"
+    },
+    {
       "id": "film",
       "label": "🎬 فیلم و سریال"
     },
@@ -594,6 +598,43 @@
         {
           "text": "آپ موزیکس (آهنگ‌های مجوزدار)",
           "url": "https://upmusics.com/"
+        }
+      ]
+    },
+    {
+      "icon": "📚",
+      "title": "کتاب و پادکست",
+      "description": "پلتفرم‌های داخلی برای دانلود کتاب یا پادکست",
+      "tags": [
+        "books"
+      ],
+      "links": [
+        {
+          "text": "کتاب سبز",
+          "url": "https://ketabesabz.com/",
+          "description": "رایگان - بدون نیاز به ثبت‌نام - تنوع دسته‌بندی کتاب"
+        },
+        {
+          "text": "فیدیبو",
+          "url": "https://fidibo.com/",
+          "description": "نیازمند ثبت‌نام و خرید کتاب - اشتراک رایگان فیدی‌پلاس در صورت داشتن دیجی‌پلاس"
+        },
+        {
+          "text": "طاقچه",
+          "url": "https://taaghche.com/"
+        },
+        {
+          "text": "نوار",
+          "url": "https://www.navaar.ir/"
+        },
+        {
+          "text": "لیبرا - Libra Books",
+          "url": "https://libra-books.com/"
+        },
+        {
+          "text": "Ebooks World",
+          "url": "https://www.ebooksworld.ir/",
+          "description": "کتاب‌های حوزه کامپیوتر و آی‌‌تی - رایگان و بدون نیاز به ثبت‌نام"
         }
       ]
     },
