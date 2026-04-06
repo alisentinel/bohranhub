@@ -663,6 +663,27 @@
       ]
     },
     {
+      "icon": "🎬",
+      "title": "زیرنویس",
+      "tags": [
+        "film"
+      ],
+      "links": [
+        {
+          "text": "سابکده",
+          "url": "https://subkade.ir/"
+        },
+        {
+          "text": "سازبون",
+          "url": "https://subzone.ir/"
+        },
+        {
+          "text": "3fa.ir",
+          "url": "https://3fa.ir/"
+        }
+      ]
+    },
+    {
       "icon": "📻",
       "title": "رادیو",
       "description": "لیست امواج رادیویی محلی و ملی",
