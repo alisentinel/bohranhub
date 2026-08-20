@@ -1,0 +1,646 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f5f5f0;
+    color: #1a1a1a;
+    min-height: 100vh
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 12px
+}
+
+/* Header */
+header {
+    background: #1a1a1a;
+    color: #f5f5f0;
+    padding: 16px 0;
+    text-align: center
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 4px
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    padding: 8px 0;
+    /* position: sticky;
+    top: 0;
+    z-index: 100 */
+}
+
+nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center
+}
+
+nav a {
+    color: #f5f5f0;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+    background: #555;
+    outline: 2px solid #f5f5f0;
+    outline-offset: 2px
+}
+
+/* Main content */
+main {
+    padding: 16px 0 32px
+}
+
+/* Section */
+.section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #fff;
+    border: 2px solid #1a1a1a;
+    border-radius: 6px
+}
+
+.section ul {
+    margin-right: 15px;
+}
+
+.section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 6px
+}
+
+.section p {
+    font-size: 0.9rem;
+    margin-top: 8px
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.tag {
+    background: #e8e8e0;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 44px;
+    font-family: inherit
+}
+
+.tag:hover,
+.tag:focus {
+    background: #d0d0c8;
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px
+}
+
+.tag.active {
+    background: #1a1a1a;
+    color: #f5f5f0
+}
+
+/* Search Input */
+.search-container {
+    margin: 12px 0
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-family: Tahoma, Arial, sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    color: #1a1a1a;
+    transition: border-color 0.2s;
+    box-sizing: border-box
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #1a1a1a
+}
+
+.search-input::placeholder {
+    color: #999
+}
+
+.search-result {
+    margin: 8px 0 0 0;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold
+}
+
+/* Tiles Section */
+.tiles-section {
+    display: grid;
+    gap: 16px
+}
+
+/* Single Tile */
+.tile {
+    background: #fff;
+    border: 2px solid #1a1a1a;
+    border-radius: 6px;
+    padding: 16px;
+    transition: none
+}
+
+.tile.hidden {
+    display: none
+}
+
+.tile h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    color: #1a1a1a
+}
+
+.warning {
+    color: #c62828;
+    font-weight: 700
+}
+
+.tile p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 12px
+}
+
+/* Inline HTML lists (from safeTags content) */
+.tile>ul,
+.tile>ol,
+.tile>p ul,
+.tile>p ol,
+.link-description ul,
+.link-description ol,
+.checklist-description ul,
+.checklist-description ol {
+    color: #333;
+    margin: 6px 0 12px 0;
+    padding-right: 20px;
+    padding-left: 0;
+}
+
+.tile>ul>li,
+.tile>ol>li,
+.tile>p li,
+.link-description li,
+.checklist-description li {
+    margin-bottom: 4px;
+    line-height: 1.6;
+    font-size: inherit;
+}
+
+.tile>ul ul,
+.tile>ol ol,
+.tile>ul ol,
+.tile>ol ul {
+    margin: 4px 0;
+    padding-right: 16px;
+}
+
+/* Collapsible details */
+details {
+    margin-bottom: 12px
+}
+
+summary {
+    cursor: pointer;
+    padding: 10px 12px;
+    background: #e8e8e0;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    list-style: none
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+summary::before {
+    display: none
+}
+
+.arrow-icon {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 0.8rem
+}
+
+summary:hover,
+summary:focus {
+    background: #d0d0c8;
+}
+
+details[open] summary {
+    border-radius: 4px 4px 0 0;
+    border-bottom: none
+}
+
+/* Links list */
+.links {
+    list-style: none;
+    background: #fafafa;
+    border: 1px solid #999;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 8px 12px
+}
+
+.links li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem
+}
+
+.links li:last-child {
+    border-bottom: none
+}
+
+.links a {
+    color: #0066cc;
+    text-decoration: underline;
+    padding: 4px 0;
+    display: inline-block
+}
+
+.links a:hover,
+.links a:focus {
+    color: #004499;
+    outline: 2px solid #0066cc;
+    outline-offset: 2px
+}
+
+.link-description {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 4px;
+    line-height: 1.4
+}
+
+/* Checklist */
+.checklist {
+    list-style: none;
+    background: #fafafa;
+    border: 1px solid #999;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 8px 12px
+}
+
+.checklist-item {
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative
+}
+
+.checklist-item:last-child {
+    border-bottom: none
+}
+
+.checklist-item.item-hidden {
+    display: none
+}
+
+.checklist-item-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px
+}
+
+.checklist-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 4px 0;
+    min-height: 32px;
+    flex: 1
+}
+
+.checklist-label.checked .checklist-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #666
+}
+
+.checklist-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+    flex-shrink: 0;
+    accent-color: #1a1a1a
+}
+
+.checklist-text {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: all 0.2s
+}
+
+.checklist-text b {
+    font-size: 1.05rem;
+}
+
+.checklist-description {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 4px;
+    margin-right: 10px;
+    line-height: 1.4
+}
+
+.checklist-hide-btn {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #999;
+    font-size: 0.9rem;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 6px;
+    margin-left: 8px;
+    transition: all 0.2s;
+    font-family: Arial, sans-serif
+}
+
+.checklist-hide-btn:hover,
+.checklist-hide-btn:focus {
+    background: #f0f0f0;
+    border-color: #999;
+    color: #d32f2f;
+    outline: 2px solid #d32f2f;
+    outline-offset: 1px
+}
+
+.checklist-restore-btn {
+    background: #e8e8e0;
+    border: 1px solid #999;
+    color: #666;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    min-height: 24px
+}
+
+.checklist-restore-btn:hover,
+.checklist-restore-btn:focus {
+    background: #d0d0c8;
+}
+
+.checklist-restore-item {
+    list-style: none;
+    border-bottom: none;
+    padding: 4px 0 0
+}
+
+.checklist-nested {
+    list-style: none;
+    padding-right: 12px;
+    border: 1px solid #999;
+    border-top: none;
+    background: #f0f0f0
+}
+
+.checklist-nested .checklist-item {
+    padding: 4px 0
+}
+
+.checklist-nested .checklist-label {
+    min-height: 28px
+}
+
+.checklist-nested .checklist-text {
+    font-size: 0.9rem;
+    font-weight: 600
+}
+
+.checklist-nested .checklist-description {
+    font-size: 0.8rem;
+    margin-right: 10px
+}
+
+/* Tile tags */
+.tile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px
+}
+
+.tile-tag {
+    background: #f0f0e8;
+    border: 1px solid #ccc;
+    padding: 2px 6px;
+    font-size: 0.65rem;
+    border-radius: 2px;
+    color: #777
+}
+
+/* Nested tiles (hierarchical structure) */
+.nested-tiles {
+    margin-top: 12px;
+    padding: 0;
+    background: transparent
+}
+
+.children-container {
+    margin-top: 12px;
+    margin-bottom: 8px
+}
+
+.children-container summary {
+    background: #d0d0c8;
+    border-color: #888;
+    font-size: 0.85rem
+}
+
+.children-container summary:hover,
+.children-container summary:focus {
+    background: #c0c0b8
+}
+
+.tile-nested {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid #999;
+    padding-left: 12px;
+    background: #fafaf8;
+    border-radius: 4px
+}
+
+.tile-nested.hidden {
+    display: none
+}
+
+.tile-nested h3 {
+    font-size: 1rem;
+    margin-bottom: 6px
+}
+
+.tile-nested details {
+    margin-bottom: 8px
+}
+
+.tile-nested summary {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    background: #e0e0d8
+}
+
+.tile-nested .links {
+    background: #fff;
+    padding: 6px 10px
+}
+
+/* Depth-based indentation */
+.tile-depth-1 {
+    margin-right: 0
+}
+
+.tile-depth-2 {
+    margin-right: 12px;
+    border-left-color: #aaa
+}
+
+.tile-depth-3 {
+    margin-right: 24px;
+    border-left-color: #bbb
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #f5f5f0;
+    padding: 16px 0;
+    text-align: center;
+    margin-top: 32px
+}
+
+footer p {
+    font-size: 0.85rem;
+    margin-bottom: 4px
+}
+
+footer .small {
+    font-size: 0.75rem;
+    opacity: 0.8
+}
+
+/* Desktop enhancements */
+@media(min-width:600px) {
+    .container {
+        padding: 0 20px
+    }
+
+    header h1 {
+        font-size: 2.2rem
+    }
+
+    .tiles-section {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    nav .container {
+        justify-content: flex-start
+    }
+}
+
+/* High contrast mode support */
+@media(prefers-contrast:high) {
+
+    .tile,
+    .tags-section,
+    .info-section {
+        border-width: 3px
+    }
+
+    .tag {
+        border-width: 3px
+    }
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce) {
+    * {
+        transition: none !important
+    }
+}
+
+/* Print styles */
+@media print {
+
+    nav,
+    footer,
+    .tags-section {
+        display: none
+    }
+
+    .tile {
+        break-inside: avoid;
+        border: 1px solid #000
+    }
+
+    details {
+        display: block
+    }
+
+    details[open] summary~* {
+        display: block
+    }
+}

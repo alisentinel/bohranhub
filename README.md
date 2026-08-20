@@ -55,15 +55,27 @@ cp data.json.example data.json
 
 ```
 bohranhub/
-├── index.php          # فایل اصلی (رندر سمت سرور)
-├── data.json          # داده‌های محتوا (gitignore شده)
-├── data.json.example  # نمونه فایل داده
-├── style.css          # استایل‌های CSS
-├── script.js          # فیلترینگ برچسب‌ها
-├── .gitignore         # فایل‌های نادیده گرفته شده توسط git
-└── README.md          # این فایل
+├── src/               # فایل‌های منبع
+│   ├── index.html     # فایل اصلی (استاتیک)
+│   ├── render.js      # رندر محتوا از data.json در مرورگر
+│   ├── script.js      # فیلترینگ برچسب‌ها و چک‌لیست
+│   ├── style.css      # استایل‌های CSS
+│   ├── data.json      # داده‌های محتوا
+│   ├── data.json.example  # نمونه فایل داده
+│   ├── robots.txt
+│   └── sitemap.xml
+├── build.sh           # ساخت نسخه فشرده در dist/
+├── dist/              # خروجی ساخت (گیت‌ایگنور، همین پوشه دیپلوی می‌شود)
+├── .gitignore
+└── README.md
 ```
-فایل‌های style.css و script.js به صورت خودکار فشرده می‌شوند.
+سایت کاملاً استاتیک است و روی هر آبجکت‌استوریج اجرا می‌شود. برای اجرای محلی:
+
+```bash
+cd src && python3 -m http.server 8000
+```
+
+برای ساخت نسخه فشرده: `./build.sh` (خروجی در `dist/`).
 
 ## 🎨 سفارشی‌سازی
 

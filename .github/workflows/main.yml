@@ -1,4 +1,4 @@
-name: Deploy PHP to cPanel
+name: Build and deploy to ArvanCloud object storage
 
 on:
   push:
@@ -7,46 +7,31 @@ on:
       - dev
 
 jobs:
-  deploy-prod:
-    if: github.ref == 'refs/heads/main'
+  deploy:
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.ARVAN_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.ARVAN_SECRET_KEY }}
+      AWS_ENDPOINT: ${{ secrets.ARVAN_ENDPOINT }}
+      BUCKET: ${{ github.ref == 'refs/heads/main' && secrets.ARVAN_BUCKET || secrets.ARVAN_BUCKET_DEV }}
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy PROD (main → public_html)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./
-          server-dir: /public_html/
-          exclude: |
-            **/.git*
-            **/.git/**
-            **/.github/**
-            **/.env
+      - name: Build minified site
+        run: ./build.sh
 
-  deploy-dev:
-    if: github.ref == 'refs/heads/dev'
-    runs-on: ubuntu-latest
+      # Assets change rarely -> cache a day. index.html/data.json are the content -> keep them fresh.
+      - name: Upload assets
+        run: |
+          aws s3 sync dist/ s3://$BUCKET/ --endpoint-url $AWS_ENDPOINT \
+            --delete --acl public-read \
+            --exclude index.html --exclude data.json \
+            --cache-control "public, max-age=86400"
 
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Deploy DEV (dev → public_html/dev)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./
-          server-dir: /public_html/dev/
-          exclude: |
-            **/.git*
-            **/.git/**
-            **/.github/**
-            **/.env
+      - name: Upload content
+        run: |
+          aws s3 sync dist/ s3://$BUCKET/ --endpoint-url $AWS_ENDPOINT \
+            --acl public-read \
+            --exclude "*" --include index.html --include data.json \
+            --cache-control "public, max-age=300"
